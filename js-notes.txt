@@ -1,0 +1,405 @@
+* domain https://server3.webhostmost.com:2222/evo/
+
+// console.log("hi")
+// let a ={
+//     name:"vikash",
+//     class:"5th",
+//     rollNo:15,
+//     fun: [hell0=()=>{
+//         console.log("obj function")
+//     },
+//         bact="play football"
+//     ]
+
+// }
+// console.log(a.fun)
+// let arr=(
+//     "a,b,c,d,ff,g"
+// )
+// console.log(arr[2])
+
+// let prom= new Promise((resolve, reject) => {
+//     let a = 15;
+//     if(a>15){
+//         resolve("ok");
+//     }
+//     else{
+//         reject("err");
+//     }
+// })
+// console.log(prom)
+// let obj ={
+//     name:"vikash",
+//     class:"5th",
+//     get cl(){
+//         console.log(this.class)
+//     }
+// }
+// console.log(obj.cl)
+
+// bind function 
+// const person = {
+//     firstName:"John",
+//     lastName: "Doe",
+//     fullName: function() {
+//       return this.firstName + " " + this.lastName;
+//     }
+//   }
+
+//map
+
+// let a = new Map(
+//     [
+//         ["b",500],
+//         ["c",411],
+//         ["d",545]
+//     ]
+// )
+// let fun = ()=>{
+//     console.log(a.get("b"))
+// }
+// fun();
+// const obj = {
+//     name: 'Geeks',
+//     greet: function() {
+//         console.log(this.name);
+//     }
+// };
+// obj.greet();
+//   let map1 = new Map();
+//   map1.set("x",500);
+//   console.log(map1.get("x") + "\n" + map1.has() + "\n" + map1.get("x") +"\n"+map1.has("x"))
+ 
+// IIfe Immediately Invoked Function Expression
+// (function hello(){
+//     console.log("hello function")
+// })();
+
+// function fun(){
+//     console.log("hello")
+//     function f1(){
+//         console.log(fun())
+//     }
+// }
+// fun();
+// let p1 = new Promise((resolve, reject) => {
+//     setTimeout(
+//         ()=>{
+//             console.log("done");
+//             resolve(true)
+//             // reject(new Error("errr"))
+//         }
+//     ,1000)
+// })
+// p1.then(()=>{
+//     console.log("done1")
+// })
+// p1.catch((error)=>{
+//     console.log("err occer")
+// })
+
+// let a = async ()=>{
+//     setTimeout(()=>{
+//         let p= new Promise((resolve,reject)=>{
+//             console.log("hello ansync");
+//             reject(new Error("err occr"));
+//         })
+//         p.catch((Error)=>{
+//             console.log("error handeled ");
+//         })>setTimeout(() => {
+//             console.log("then write some code")
+//         }, 1000);
+//     },2000)
+// }
+// let a2 = async ()=>{
+//     setTimeout(()=>{
+//         let p= new Promise((resolve,reject)=>{
+//             console.log("hello ansync22222222");
+//             reject(new Error("err occr"));
+//         })
+//         p.catch((Error)=>{
+//             console.log("error handeled ");
+//         })>setTimeout(() => {
+//             console.log("then write some code")
+//         }, 1000);
+//     },2000)
+// }
+// let await1 = await a();
+// let awit2= await a2();
+
+// return [a(),a2()]
+Events On DOM
+let jsbtn= document.getElementById("btn")
+jsbtn.addEventListener("mouseover",()=>{console.log("i am overed!!!")})
+
+document.querySelector(".container").addEventListener("click",(e)=>{
+    alert("container is clicked",e.stopPropagation())
+})
+document.querySelector(".childContainer").addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    document.body.classList.add("my-class");
+
+    e.currentTarget.style.backgroundColor = "red";
+    setTimeout(()=>{
+        alert("child container clicked")
+    },1000)
+});
+let element = document.querySelector(".childContainer");
+
+document.querySelector(".child").addEventListener("click",(x)=>{
+    (x.stopPropagation());
+    
+})
+============
+await
+let p = (async (params) => {
+    new Promise((resolve, reject) => {
+        console.log("hello"),
+            resolve("hello resolve")
+        // reject(new Error("err"))
+    }).then((error) => {
+        params = {
+            name: "vikash"
+        }
+        if (typeof (params) === "object") {
+            console.log("param is 5", typeof (params))
+        }
+    }).then((error) => {
+        console.log("err held1")
+    }).then((error) => {
+        console.log("err held11")
+    }).then((error) => {
+        console.log("err held11")
+    }).then((error) => {
+        console.log("err held22")
+    })
+    setTimeout(() => { console.log("hello set time out") }, 3000)
+
+})
+let wait = (async () => {
+    await p()
+    console.log("hello wait")
+})()
+// delete is an oprator in array
+let a =[1,2,3,4,5,6,7,8,9,0]
+delete a[0  ]
+console.log(a,typeof(a))
+===========
+Call back//A callback(a ter,) is a function passed as an argument to another function.
+//where to use:where one function has to wait for another function (like waiting for a file to load).
+let a=()=>{
+    console.log("hello a")
+
+}
+let b=()=>{
+    console.log("hello b")
+
+}
+a(b())
+================
+//The HTML DOM (Document Object Model)
+//When a web page is loaded, the browser creates a Document Object Model of the page.
+// In the DOM, all HTML elements are defined as objects.
+
+// The programming interface is the properties and methods of each object.
+
+// A property is a value that you can get or set (like changing the content of an HTML element).
+
+// A method is an action you can do (like add or deleting an HTML element).
+//Data validation is the process of ensuring that user input is clean, correct, and useful.
+//document.getElementById(id).style.property = new style
+
+//form validation
+let validateForm = () => {
+    let fname = document.forms["myForm"]["fname"].value;
+    if (!fname) {
+      alert("Please fill out the name field first.");
+      return false; // Prevent form submission
+    }
+    return true; // Allow form submission
+  };
+
+  //get req. from server
+  //post req. to submit the data (sequare/sensitive data/alot of data/file)
+  //put to update the data
+  // delete req to delete the data 
+  //option req to fatch meta data
+
+====
+Notes:In JavaScript, "data parsing" usually refers to the process of converting data from one format to another, making it more usable within your code. Here are a few common examples:
+1. JSON Parsing:
+JSON.parse(): This method converts a JSON string into a JavaScript object. 
+2. String Parsing:
+Extracting information from a string: You can use various string methods like split(), substring(), indexOf(), etc., to extract specific parts of a string.
+========================================
+
+some extended examples :
+
+    let a={
+        prop1:"i am a ",
+        prop2:"i am js created",
+        prop3: 2,
+    }
+console.log(Object.values(a.prop1.toLocaleUpperCase()))
+
+
+function fetchData() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const data = { id: 1, name: "Vikash Malik", profession: "Front-End Developer" };
+        resolve(data); // Resolve the promise with the data
+      }, 2000); // Simulate a 2-second delay
+    });
+  }
+  
+  // Async function to fetch and process data
+  async function getData() {
+    try {
+      console.log("Fetching data...");
+      const data = await fetchData(); // Wait for the promise to resolve
+      console.log("Data received:", data);
+      return data; // Return the data for further use
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      throw error; // Handle errors
+    }
+  }
+  
+  // Call the async function
+  getData()
+    .then((data) => {
+      console.log("Data processing complete:", data);
+    })
+    .catch((error) => {
+      console.error("Error in data processing:", error);
+    });
+
+
+    ========
+    map const fruits = [
+  {name:"apples", quantity:300},
+  {name:"bananas", quantity:500},
+  {name:"oranges", quantity:200},
+  {name:"kiwi", quantity:150}
+];
+
+// Callback function to Group Elements
+function myCallback({ quantity }) {
+  return quantity > 200 ? "ok" : "low";
+}
+
+// Group by Quantity
+const result = Map.groupBy(fruits, myCallback);
+====map
+c=[4111,2,3,4,5,6,7,8,9]
+
+c.map((value,index,array)=>{
+    console.log(e)
+})
+console.log(a)
+
+==================================
+//Todo
+// //77,84 code with harry siga 
+//fatch api
+//
+//random passwor genrator 
+// https://www.techmagnate.com/careers/html-developer-jobs-delhi.html send link to vinita
+// A package in Node.js contains all the files you need for a module.//Every action on a computer is an event
+
+// Modules are JavaScript libraries you can include in your projecle
+// Simulate fetching data from an API after a delay
+
+
+// let a = 
+// async (a,b) => {
+//     let prom = new Promise(
+//         (resolve, reject)=>{
+//             console.log("resolve");
+//             let  b = resolve("done")
+//             setTimeout(()=>{
+//               let b ="hello"
+//               let name ="vikash"
+//                 console.log(`${name}` )
+//             },1000)
+//         }
+//     )
+// }
+// a()
+
+
+// callback function
+// function  loadScript(src){
+//     var script = document.createElement("script");
+//     script.src = src;
+//     script.onload = function(){
+//         console.log("src:" + src)
+//     }
+//     document.body.appendChild(script)
+// }
+// loadScript("https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css")
+//====================================================================================================
+let std = ["a","b","c"]
+
+// console.log(std.toString() + "\n" + std.length)
+// console.log(std.push("hello")  + std)
+// console.log(std.unshift("wow") + std)
+// console.log(std.map(item => item.toUpperCase()));
+
+// for(i=0;i<std.length;i++){
+// console.log(std[i])
+// }
+
+// let std1 ={
+//     name:"vikash",
+//     age:32
+// }
+// console.log(std1)
+// for(let x of Object.keys(std1)){
+//     console.log(x)
+// }
+
+// let a = new Set([1,2,3,4,5,6,7,8])
+// console.log(a.has(9))
+// a.forEach((v)=>{
+//     console.log(v)
+// })
+
+// let m = new Map([
+//     ["apple",100],
+//     ["banana",200],
+//     ["orange",300]
+// ])
+// // console.log(m.so("orange"))
+// for(let x of m.values()){
+//     console.log(x)
+// }
+// let  a=10;
+// let b= "ban"
+// let c = function x(){
+//     console.log(a + b)
+// }
+// c()
+// console.log(typeof(c))
+// let y=document.getElementsByTagName("span")[0].innerHTML
+// console.log(y)
+// const person = {
+//     firstName: "John",
+//     lastName : "Doe",
+//     id       : 5566,
+//     fullName : function() {
+//       return this.firstName + " " + this.lastName;
+//     }
+//   };
+// console.log(typeof(person))
+// function hello(){
+//     console.log("hello")
+// }  
+// function hello1(){
+// hello()
+//     console.log("hello1111")
+// }  
+// hello1()
+
+
