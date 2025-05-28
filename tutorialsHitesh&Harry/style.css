@@ -1,0 +1,25 @@
+body {
+  background: rgb(75, 75, 75);
+  color: rgb(255, 255, 255);
+}
+
+.parent, .container .nav-list {
+  display: flex;
+}
+
+.container .nav-list {
+  border: 1px solid rgb(72, 255, 0);
+  padding: 5px;
+}
+.container .nav-list li {
+  list-style-type: none;
+  padding: 0 10px 0 0;
+}
+
+.parent .week-day {
+  padding-right: 10px;
+  cursor: pointer;
+}
+.parent .week-day:hover {
+  color: green;
+}/*# sourceMappingURL=style.css.map */

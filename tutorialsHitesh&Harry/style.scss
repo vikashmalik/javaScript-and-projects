@@ -1,0 +1,33 @@
+body {
+    background: rgb(75, 75, 75);
+    color:
+        rgb(255, 255, 255);
+}
+
+ %flex-box {
+    display: flex;
+}
+
+.container {
+    .nav-list {
+        @extend %flex-box;
+        border: 1px solid rgb(72, 255, 0);
+        padding: 5px;
+        li{
+            list-style-type: none;
+            padding: 0 10px 0 0;
+        }
+    }
+}
+
+.parent {
+@extend %flex-box;
+ .week-day{
+    padding-right: 10px;
+    cursor: pointer;
+    &:hover{
+        color: green;
+    }
+ }
+}
+

@@ -1,3 +1,5 @@
+//+++ By HItesh chai or code 
+
 // function myf(){
 //     x= 1 
 //     return x
@@ -165,5 +167,29 @@
 // convertedArray.forEach((li)=>{
 //     li.style.color=  "red"
 // })
+
+// let parentDiv = document.querySelector(".parent") 
+
+// console.log(parentDiv.children)  // result are more likely array but nnot array
+// console.log(parentDiv.children[1]) // will access there properties (o/p div.week-day)
+// console.log(parentDiv.children[1].innerText) //innerHTML will access content inside
+// console.log(parentDiv.children[1].style.color="red");
+// let nodeElement = (parentDiv.children);
+// //nextElementSibling 
+// console.log("NODES: ", parentDiv.childNodes);
+// let h1 = document.createElement('h3')
+// h1.className='h1class';
+// h1.id=Math.round(Math.random()*100 + 1)
+// console.log(h1);
+// // h1.innerHTML('this is a h1 tag')
+// let addH1 = document.createTextNode('this is a h1 by using createTextNode')
+// h1.appendChild(addH1)
+// h1.style.color="green"
+// document.body.appendChild(h1)
+// // node list and html collections are two diff thing forEach((loop)=>{call back fn}) could be perform on node list 
+
+console.log("hello");
+
+//hitesh 2:02
 
 

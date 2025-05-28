@@ -37,7 +37,7 @@
 // }
 // console.log(obj.cl)
 
-// bind function 
+// //bind function 
 // const person = {
 //     firstName:"John",
 //     lastName: "Doe",
