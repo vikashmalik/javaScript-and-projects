@@ -186,10 +186,65 @@
 // h1.appendChild(addH1)
 // h1.style.color="green"
 // document.body.appendChild(h1)
-// // node list and html collections are two diff thing forEach((loop)=>{call back fn}) could be perform on node list 
 
 console.log("hello");
 
 //hitesh 2:02
 
 
+
+// Events in DOM**************************************************
+
+// // node list and html collections are two diff thing forEach((loop)=>{call back fn},false
+//true[event propagation/ bubbling default is  false] ) could be perform on node list 
+
+//type(keybord types eent, moue event, timeStemp, defaultPreventred (to control the default behaviour of elements or navigation of link tag and window behavior of browser))
+//target, toElement, srcElement, currentTarget
+// screen/clientX, clintY
+//altKey, ctrlKey, shiftKey, keyCode (likea,b,c,d,...)
+
+
+// // project 1 color picker 
+//  let list_item = document.querySelectorAll('.list-item')
+//  console.log(list_item)
+//  let body = document.querySelector('body')
+//  console.log(body);
+
+//  list_item.forEach(function (lst) {
+//     console.log(lst);
+//     lst.addEventListener('mouseover', function(e) {
+//         console.log(e)
+//         if (e.target.className === 'list-item red') { //className returns the full string ("list-item red"), not just "red"
+//             body.style.backgroundColor = 'red'
+//         }
+//         else if(lst.id.contains === 'blue'){
+//               body.style.backgroundColor = e.target.id;
+
+//         }
+//         else if(lst.className.contains === 'list-item yellow'){
+//             body.style.backgroundColor = e.target.className;
+
+//       }
+
+//       else if(lst.className.contains === 'list-item white'){ 
+//         body.style.backgroundColor = 'white';
+
+//   }
+//     })
+//  })
+ 
+
+// // else if (lst.id.includes('blue')) {  // Checks if ID contains 'blue'
+// // body.style.backgroundColor = 'blue';
+// // }//
+// // if (lst.classList.contains('red')) {  // Checks if element has class 'red'
+// //     body.style.backgroundColor = 'red';
+// // }
+// // 📖 includes() vs contains()
+// // Method	      Applies To	     Purpose	                                  Example
+// // .includes()	Strings & Arrays	Checks if a value exists in a string/array	"hello".includes("ell") → true
+// // .contains()	classList (DOM)	Checks if an element has a class	element.classList.contains("red")
+
+//bubbling in js
+// document.getElementById('xyz').addEventListener.apply('click',function(){log;e.stoppropagation},flase/true)
+// while using false it will go like img clicked > li clicked > ul>clickked;; but if this true will go ulclicked >> li clicked >> img; depens on useCase 

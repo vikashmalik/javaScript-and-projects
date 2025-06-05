@@ -4,7 +4,7 @@ body {
         rgb(255, 255, 255);
 }
 
- %flex-box {
+%flex-box {
     display: flex;
 }
 
@@ -13,7 +13,8 @@ body {
         @extend %flex-box;
         border: 1px solid rgb(72, 255, 0);
         padding: 5px;
-        li{
+
+        li {
             list-style-type: none;
             padding: 0 10px 0 0;
         }
@@ -21,13 +22,44 @@ body {
 }
 
 .parent {
-@extend %flex-box;
- .week-day{
-    padding-right: 10px;
-    cursor: pointer;
-    &:hover{
-        color: green;
+    @extend %flex-box;
+
+    .week-day {
+        padding-right: 10px;
+        cursor: pointer;
+
+        &:hover {
+            color: green;
+        }
     }
- }
 }
 
+.color-picker-container {
+    .list-container {
+        @extend %flex-box;
+
+        .list-item {
+            border: 1px solid black;
+            height: 75px;
+            width: 75px;
+            display: inline-block;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: yellow;
+        }
+
+        .white {
+            // background-color: yellow;
+            width: 75px;
+        }
+    }
+}
