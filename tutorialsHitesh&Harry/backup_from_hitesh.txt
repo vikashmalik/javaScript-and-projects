@@ -256,30 +256,3 @@ console.log("hello");
 ////
 //api////// api.github randomuser. me 
 // there is alot of data in the api can read in the form of aex and son file   to read that data we are going to use the website kinda recomdation only "son formatter "
-
-//XMLHttpRequest (XHR) objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh. 
-// This enables a Web page to update just part of a page without disrupting what the user is doing.
-// Events******
-// abort = Fired when a request has been aborted XMLHttpRequest.abort().
-
-// error =
-
-// load = Fired when an XMLHttpRequest transaction completes successfully.the onload event .
-
-// loadend = Fired when a request has completed, whether successfully (after load) or unsuccessfully (after abort or error). Also available via the onloadend event handler property.
-
-// loadstart = Fired when a request has started to load data. Also available via the onloadstart event handler property.
-
-// progress = Fired periodically when a request receives more data. Also available via the onprogress event handler property.
-
-// readystatechange =  Fired whenever the readyState property changes. Also available via the onreadystatechange event handler property.
-
-// timeout = Fired when progress is terminated due to preset time expiring. Also available via the ontimeout event handler property.
-
-// Holds the status of the XMLHttpRequest.
-// 0: request not initialized
-// 1: server connection established
-// 2: request received
-// 3: processing request
-// 4: request finished and response is ready
-
