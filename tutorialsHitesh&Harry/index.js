@@ -277,9 +277,47 @@ console.log("hello");
 // timeout = Fired when progress is terminated due to preset time expiring. Also available via the ontimeout event handler property.
 
 // Holds the status of the XMLHttpRequest.
-// 0: request not initialized
-// 1: server connection established
-// 2: request received
-// 3: processing request
-// 4: request finished and response is ready
+       //State
+// 0: unsend            open()request not initialized
+// 1: OPENED            open() server connection established
+// 2: Headers Recive    send()  request received
+// 3: LOADING           processing request
+// 4: DONE              request finished and response is ready
+
+// data data = Number/String/JSON.parse(this.stringFromURL) // .parseto change the string in number/string and JSON 
+
+//V8 engine      github/v8     Console.log====================
+// its a dev tool nt a part of JS
+
+
+//FETCH//Promises =6.22.00 hitesh part 2========================================================================
+// Rad this once https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch
+
+//The fetch() method of the Window interface starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available.
+
+// The promise resolves to the Response object representing the response to your request.
+
+// A fetch() promise only rejects when the request fails, for example, because of a badly-formed request URL or a network error. 
+// A fetch() promise does not reject if the server responds with HTTP status codes that indicate errors (404, 504, etc.). Instead, 
+// a then() handler must check the Response.ok and/or Response.status properties.
+
+
+//Classes / object orianted programing
+//js is a prtotype based languages, its classes are primarerlly syntatic suger over prototype-bases language
+// have constructor/inhertance  programing peradime (codeing style structur classes/function etc  )
+//oops : objects : collection of propreties(variable/constents and method(function)
+//why use opps : js to ignorance of messing up code 
+// parts of oops : Objects literal(literally)
+// constructor ,prototype, classes, instances (new, this etc )
+//read on own : Abstracton(hide the detail like fetch ),inheritance, encapsulation(rapup the data/things ), plymorphism(many roop/woks done by one code)
+       //class literals       
+const user = {
+       useName : 'vikash',
+       loginCount : 8,
+       getUserData : function(){
+              return ("got user data from user databace")
+       }
+   } 
+   console.log(user.getUserData());
+   
 
