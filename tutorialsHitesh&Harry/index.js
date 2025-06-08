@@ -311,13 +311,150 @@ console.log("hello");
 // constructor ,prototype, classes, instances (new, this etc )
 //read on own : Abstracton(hide the detail like fetch ),inheritance, encapsulation(rapup the data/things ), plymorphism(many roop/woks done by one code)
        //class literals       
-const user = {
-       useName : 'vikash',
-       loginCount : 8,
-       getUserData : function(){
-              return ("got user data from user databace")
-       }
-   } 
-   console.log(user.getUserData());
+// const user = {
+//        useName : 'vikash',
+//        loginCount : 8,
+//        getUserData : function(){
+//              // return ("got user data from user databace")
+//               console.log (this.useName)
+//        }
+//    } 
+//    console.log(user.getUserData());
+//    console.log(this);// {} would be emty bcz there is no data but in browser there would be many values 
+//    // constructer function const date = ne Date(); promiseOne = new promise(); here new is a constructer function to cunstruct a new method that would not effect the other date of code
+// function User(userName, age, loginCount) {
+//        this.userName = userName;
+//        this.age = age;
+//        loginCount = loginCount;
+//        this.aMethod = ()=>{
+//               console.log(`welcom ${this.userName}`);
+              
+//        }
+//        return this
+//        // No need to explicitly return 'this' - it's done automatically with 'new'
+//    }
    
+//    // Call with 'new' to create a new instance
+//    // 3 setps 1. object create , values and props, and then will pass in "this"
+//    const userOne =new User("vikash MAlik", 32, true);// constuctor fn bcz of new keyword
+//    const userTwo =new User("JavaScript", 32, true);
+
+//    console.log(userOne);// encpsulateion the data in userOne like we dnt have to care abt where data is stroing 
+//    console.log(userTwo.constructor);// instanceof read about 
+
+//=== prototiple behaviour 7:14 hitesh(chai or code)
+// js default behaviour is prototiple 
+// an ex from console  
+// let aArray = ["abc","xyz"]
+// undefined
+// aArray
+// (2) ['abc', 'xyz']0: "abc"1: "xyz"length: 2[[Prototype]]: Array(0)// this waht we talk abt will dig till console will not get value = null// call protoiple inheritance 
+// evcerting in js is object arry,string >> object >> null{ the prototype will stop at the end here }
+
+//function is function also an object can let it behave like object
+
+// function multBy5(num){
+//        return num*5
+// }
+// multBy5.power = 2;
+// console.log(multBy5(5))
+
+// console.log(multBy5.prototype);
+// multBy5.prototype.x = function (){
+//        console.log("wlacom x");
+       
+// }   
+// let obj = new multBy5()//
+// console.log(obj.x()) // also we can use multBy5.prototype.x ** You cannot call x() directly
+
+//== NEw Keyword
+// // Ex from chat gpt=======
+// function multBy5(num) {
+//        return num * 5;
+//    }
+//    multBy5.power = 2;
+   
+//    // Adding a method to the prototype
+//    multBy5.prototype.x = function() {
+//        console.log("welcome x");
+//    };
+   
+//    // Creating an instance to call the method
+//    const obj = new multBy5();
+//    obj.x(); // Output: "welcome x"
+/*
+
+Here's what happens behind the scenes when the new keyword is used:
+
+A new object is created: The new keyword initiates the creation of a new JavaScript object.
+
+A prototype is linked: The newly created object gets linked to the prototype property of the constructor function. This means that it has access to properties and methods defined on the constructor's prototype.
+
+The constructor is called: The constructor function is called with the specified arguments and this is bound to the newly created object. If no explicit return value is specified from the constructor, JavaScript assumes this, the newly created object, to be the intended return value.
+
+The new object is returned: After the constructor function has been called, if it doesn't return a non-primitive value (object, array, function, etc.), the newly created object is returned.*/
+
+
+// js gives constructor function using new keyWord rather thn using classes like normal opps language
+
+// Prottype ======  watch again 7:30
+
+
+
+
+
+
+
+
+
+// calsses ============
+// in class we can add properties,function etc.
+//  class userClass {
+//        constructor (userNma,email,password){
+//               this.userNma =  userNma,
+//               this.email = email,
+//               this.password = password
+//        }
+//        encPassword(){                     //class method
+//               return `${this.password}abc`
+//        }
+//  }
+//  const chai = new userClass("chai","chai.gmail.com","123")
+// console.log(chai.encPassword());
+// inheritance ===================
+class userGernal {
+       constructor(userName) {
+           this.userName = userName;
+       }
+       logme() {
+           if (this.userName) {  //  this.userName is required otherwise log will give an error the userName is not defined
+               console.log(`the username is ${this.userName}`);
+           } else {
+               console.log('the username is false');
+           }
+       }
+   }
+   
+   class teacher extends userGernal {
+       constructor(userName, email, password) {
+           super(userName);
+           this.email = email; 
+           this.password = password;
+       }
+   }
+   
+   // To test userGernal (only accepts username)
+   const newUser = new userGernal('vikash');
+   newUser.logme();  // Will print "the username is vikash"
+   
+   // To test teacher (accepts all three parameters)
+   const newTeacherOne = new teacher('vikash', 'vik@MediaList.com', '123');
+   newTeacherOne.logme();  // Will print "the username is vikash"
+   
+   // Testing with false case
+   const falseUser = new userGernal('');
+   falseUser.logme();  // Will print "the username is false"
+       console.log(falseUser === teacher) //false bcz teacher is child of userGernal like made frome userGernal but 
+       console.log(newUser instanceof userGernal )
+
 
