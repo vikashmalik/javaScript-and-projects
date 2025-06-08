@@ -533,7 +533,7 @@ The new object is returned: After the constructor function has been called, if i
 // }
 
 // getter_setter:: In JavaScript, the getter and to acces the object properties but in the different ways and set to setting up the property
-class User {                                     // mostly used new
+class User {                                     // mostly used n
        constructor(email, password){
            this.email = email;
            this.password = password
