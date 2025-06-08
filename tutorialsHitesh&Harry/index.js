@@ -422,39 +422,62 @@ The new object is returned: After the constructor function has been called, if i
 //  const chai = new userClass("chai","chai.gmail.com","123")
 // console.log(chai.encPassword());
 // inheritance ===================
-class userGernal {
-       constructor(userName) {
-           this.userName = userName;
-       }
-       logme() {
-           if (this.userName) {  //  this.userName is required otherwise log will give an error the userName is not defined
-               console.log(`the username is ${this.userName}`);
-           } else {
-               console.log('the username is false');
-           }
-       }
-   }
+// class userGernal {
+//        constructor(userName) {
+//            this.userName = userName;
+//        }
+//        logme() {
+//            if (this.userName) {  //  this.userName is required otherwise log will give an error the userName is not defined
+//                console.log(`the username is ${this.userName}`);
+//            } else {
+//                console.log('the username is false');
+//            }
+//        }
+//    }
    
-   class teacher extends userGernal {
-       constructor(userName, email, password) {
-           super(userName);
-           this.email = email; 
-           this.password = password;
-       }
-   }
+//    class teacher extends userGernal {
+//        constructor(userName, email, password) {
+//            super(userName);
+//            this.email = email; 
+//            this.password = password;
+//        }
+//    }
    
-   // To test userGernal (only accepts username)
-   const newUser = new userGernal('vikash');
-   newUser.logme();  // Will print "the username is vikash"
+//    // To test userGernal (only accepts username)
+//    const newUser = new userGernal('vikash');
+//    newUser.logme();  // Will print "the username is vikash"
    
-   // To test teacher (accepts all three parameters)
-   const newTeacherOne = new teacher('vikash', 'vik@MediaList.com', '123');
-   newTeacherOne.logme();  // Will print "the username is vikash"
+//    // To test teacher (accepts all three parameters)
+//    const newTeacherOne = new teacher('vikash', 'vik@MediaList.com', '123');
+//    newTeacherOne.logme();  // Will print "the username is vikash"
    
-   // Testing with false case
-   const falseUser = new userGernal('');
-   falseUser.logme();  // Will print "the username is false"
-       console.log(falseUser === teacher) //false bcz teacher is child of userGernal like made frome userGernal but 
-       console.log(newUser instanceof userGernal )
+//    // Testing with false case
+//    const falseUser = new userGernal('');
+//    falseUser.logme();  // Will print "the username is false"
+//        console.log(falseUser === teacher) //false bcz teacher is child of userGernal like made frome userGernal but 
+//        console.log(newUser instanceof userGernal )
 
 
+//properties/pros of classes 
+ class user  {       
+       constructor(userName){
+              this.userName  = userName;
+       }
+       logMe(){
+              console.log( `user name is: ${this.userName}`)// task as the user have been create id will get allocate a user unique ID
+       }
+        createID(){          // use "static"somtime it would be like that you won't wanna give the accece of the method to every obeject that instateate from the class(here class is class user) from this 
+              //console.log(`${this.userName}123`)
+       }
+ }
+const newUser = new user("vikash")
+console.log(newUser.createID())     // err bcz of static creatID is not defined 
+
+class teacher extends user{
+       constructor(userName,email){
+              super (userName);
+              this.email = email;
+       }
+}
+const iphone = new teacher("iphone", "iphone@.phone.com")
+console.log(iphone);
