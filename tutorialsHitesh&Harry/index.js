@@ -72,9 +72,9 @@
 // conditions
 //  switch (key) {
 //     case value:
-        
+
 //         break;
- 
+
 //     default:
 //         break;
 //  }
@@ -87,7 +87,7 @@
 //         case 2 :
 //             console.log("case 2");
 // default
-        
+
 // }
 
 // falsy value 
@@ -110,21 +110,21 @@
 // // ===============chaninng result of 1st map/method would pass to the next method/map in chain
 //  let chaining = nums.map((num)=> num * 10 ).map((num)=> num / 2).filter((num)=> num >= 30)
 //  console.log(chaining);
- 
+
 
 // Reduce method 
 
 // let x = [10,123,1,1]
 //  let rArr = [1,2,3,4];
 //  let initalVal = 0;
- 
+
 //  let rMethod = x.reduce((a,b)=> {
 //  console.log(`${a}   and  ${b}`);
 
 //     return a + b
 //   },initialVal) 
 
- 
+
 //  console.log(rMethod); // this method could use to the shoping mall like scanne and price would add and add
 
 //// DOM mnuplation by hitesh 
@@ -149,15 +149,15 @@
 //             // return q < 2000;
 //         }))
 //     }));
-    
+
 //  }));
 // console.log(x.shift);
 
- //document.getElementByID('title').id/className/tag.textContent/innerHTML/innerText//(provides same value)
- //<p style="display none">innerText willnot show/access this but innerContent will do </p>
- 
- // querySelector
- // document.querySelector('p:')
+//document.getElementByID('title').id/className/tag.textContent/innerHTML/innerText//(provides same value)
+//<p style="display none">innerText willnot show/access this but innerContent will do </p>
+
+// querySelector
+// document.querySelector('p:')
 //https://www.jobleads.com/search/jobs 
 // document.querySelector('.nav-list').style.color="red"
 // let navList = document. ("nav-item")
@@ -232,7 +232,7 @@ console.log("hello");
 //   }
 //     })
 //  })
- 
+
 
 // // else if (lst.id.includes('blue')) {  // Checks if ID contains 'blue'
 // // body.style.backgroundColor = 'blue';
@@ -277,7 +277,7 @@ console.log("hello");
 // timeout = Fired when progress is terminated due to preset time expiring. Also available via the ontimeout event handler property.
 
 // Holds the status of the XMLHttpRequest.
-       //State
+//State
 // 0: unsend            open()request not initialized
 // 1: OPENED            open() server connection established
 // 2: Headers Recive    send()  request received
@@ -310,7 +310,7 @@ console.log("hello");
 // parts of oops : Objects literal(literally)
 // constructor ,prototype, classes, instances (new, this etc )
 //read on own : Abstracton(hide the detail like fetch ),inheritance, encapsulation(rapup the data/things ), plymorphism(many roop/woks done by one code)
-       //class literals       
+//class literals       
 // const user = {
 //        useName : 'vikash',
 //        loginCount : 8,
@@ -328,12 +328,12 @@ console.log("hello");
 //        loginCount = loginCount;
 //        this.aMethod = ()=>{
 //               console.log(`welcom ${this.userName}`);
-              
+
 //        }
 //        return this
 //        // No need to explicitly return 'this' - it's done automatically with 'new'
 //    }
-   
+
 //    // Call with 'new' to create a new instance
 //    // 3 setps 1. object create , values and props, and then will pass in "this"
 //    const userOne =new User("vikash MAlik", 32, true);// constuctor fn bcz of new keyword
@@ -362,7 +362,7 @@ console.log("hello");
 // console.log(multBy5.prototype);
 // multBy5.prototype.x = function (){
 //        console.log("wlacom x");
-       
+
 // }   
 // let obj = new multBy5()//
 // console.log(obj.x()) // also we can use multBy5.prototype.x ** You cannot call x() directly
@@ -373,12 +373,12 @@ console.log("hello");
 //        return num * 5;
 //    }
 //    multBy5.power = 2;
-   
+
 //    // Adding a method to the prototype
 //    multBy5.prototype.x = function() {
 //        console.log("welcome x");
 //    };
-   
+
 //    // Creating an instance to call the method
 //    const obj = new multBy5();
 //    obj.x(); // Output: "welcome x"
@@ -434,7 +434,7 @@ The new object is returned: After the constructor function has been called, if i
 //            }
 //        }
 //    }
-   
+
 //    class teacher extends userGernal {
 //        constructor(userName, email, password) {
 //            super(userName);
@@ -442,15 +442,15 @@ The new object is returned: After the constructor function has been called, if i
 //            this.password = password;
 //        }
 //    }
-   
+
 //    // To test userGernal (only accepts username)
 //    const newUser = new userGernal('vikash');
 //    newUser.logme();  // Will print "the username is vikash"
-   
+
 //    // To test teacher (accepts all three parameters)
 //    const newTeacherOne = new teacher('vikash', 'vik@MediaList.com', '123');
 //    newTeacherOne.logme();  // Will print "the username is vikash"
-   
+
 //    // Testing with false case
 //    const falseUser = new userGernal('');
 //    falseUser.logme();  // Will print "the username is false"
@@ -459,25 +459,75 @@ The new object is returned: After the constructor function has been called, if i
 
 
 //properties/pros of classes 
- class user  {       
-       constructor(userName){
-              this.userName  = userName;
-       }
-       logMe(){
-              console.log( `user name is: ${this.userName}`)// task as the user have been create id will get allocate a user unique ID
-       }
-        createID(){          // use "static"somtime it would be like that you won't wanna give the accece of the method to every obeject that instateate from the class(here class is class user) from this 
-              //console.log(`${this.userName}123`)
-       }
- }
-const newUser = new user("vikash")
-console.log(newUser.createID())     // err bcz of static creatID is not defined 
+//  class user  {       
+//        constructor(userName){
+//               this.userName  = userName;
+//        }
+//        logMe(){
+//               console.log( `user name is: ${this.userName}`)// task as the user have been create id will get allocate a user unique ID
+//        }
+//         createID(){          // use "static"somtime it would be like that you won't wanna give the accece of the method to every obeject that instateate from the class(here class is class user) from this 
+//               //console.log(`${this.userName}123`)
+//        }
+//  }
+// const newUser = new user("vikash")
+// console.log(newUser.createID())     // err bcz of static creatID is not defined 
 
-class teacher extends user{
-       constructor(userName,email){
-              super (userName);
-              this.email = email;
+// class teacher extends user{
+//        constructor(userName,email){
+//               super (userName);
+//               this.email = email;
+//        }
+// }
+// const iphone = new teacher("iphone", "iphone@.phone.com")
+// console.log(iphone);
+
+//Bind function {With the bind() method, an object can borrow a method from another object.}
+// do again 8:45 timeline
+// class React {
+//        constructor(){
+//            this.library = "React"
+//            this.server = "https://localhost:300"
+
+//            //requirement
+//            document
+//                .querySelector('button')
+//                .addEventListener('click', this.handleClick.bind(this))
+
+//        }
+//        handleClick(){
+//            console.log("button clicked");
+//            console.log(this.server);
+//        }
+//    }
+
+//    const app = new React()
+
+//mathpi in js
+// const dicriptor = Object.getOwnPropertyDescriptor(Math,"PI")
+// console.log(dicriptor) // o/p {value: 3.141592653589793, writable: false, enumerable(repeactable): false, configurable: false}
+
+const chai = {
+       name: "normal tea",
+       price: 50,
+       avaible: true,
+       orderChai: function () {
+              console.log('chai didn"t made');
+
        }
 }
-const iphone = new teacher("iphone", "iphone@.phone.com")
-console.log(iphone);
+console.log(Object.getOwnPropertyDescriptor(chai, "name"));
+// Object.defineProperty(chai,"name",{
+//        writable: false,
+//        enumerable: false,   // if it false we will not able to do loop on the object   
+//        configurable: false,
+// })
+// console.log(Object.getOwnPropertyDescriptor(chai,"name"));
+
+for (const [key, vlaue] of Object.entries(chai)) {
+       if (typeof vlaue !== "function") {
+              console.log(`${key};${vlaue}`);         // it will give the fn defination in the output to avoid this we would use the condition check if the key not equal to the function thenm it would print 
+
+       }
+
+}
