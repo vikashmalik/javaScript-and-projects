@@ -507,27 +507,128 @@ The new object is returned: After the constructor function has been called, if i
 // const dicriptor = Object.getOwnPropertyDescriptor(Math,"PI")
 // console.log(dicriptor) // o/p {value: 3.141592653589793, writable: false, enumerable(repeactable): false, configurable: false}
 
-const chai = {
-       name: "normal tea",
-       price: 50,
-       avaible: true,
-       orderChai: function () {
-              console.log('chai didn"t made');
+// const chai = {
+//        name: "normal tea",
+//        price: 50,
+//        avaible: true,
+//        orderChai: function () {
+//               console.log('chai didn"t made');
 
+//        }
+// }
+// console.log(Object.getOwnPropertyDescriptor(chai, "name"));
+// // Object.defineProperty(chai,"name",{
+// //        writable: false,
+// //        enumerable: false,   // if it false we will not able to do loop on the object   
+// //        configurable: false,
+// // })
+// // console.log(Object.getOwnPropertyDescriptor(chai,"name"));
+
+// for (const [key, vlaue] of Object.entries(chai)) {
+//        if (typeof vlaue !== "function") {
+//               console.log(`${key};${vlaue}`);         // it will give the fn defination in the output to avoid this we would use the condition check if the key not equal to the function thenm it would print 
+
+//        }
+
+// }
+
+// getter_setter:: In JavaScript, the getter and to acces the object properties but in the different ways and set to setting up the property
+class User {                                     // mostly used new
+       constructor(email, password){
+           this.email = email;
+           this.password = password
        }
-}
-console.log(Object.getOwnPropertyDescriptor(chai, "name"));
-// Object.defineProperty(chai,"name",{
-//        writable: false,
-//        enumerable: false,   // if it false we will not able to do loop on the object   
-//        configurable: false,
-// })
-// console.log(Object.getOwnPropertyDescriptor(chai,"name"));
-
-for (const [key, vlaue] of Object.entries(chai)) {
-       if (typeof vlaue !== "function") {
-              console.log(`${key};${vlaue}`);         // it will give the fn defination in the output to avoid this we would use the condition check if the key not equal to the function thenm it would print 
-
+   
+       get email(){
+           return this._email.toUpperCase()
        }
+       set email(value){
+           this._email = value
+       }
+   
+       get password(){
+           return `${this._password}hitesh`
+       }
+   
+       set password(value){
+           this._password = value
+       }
+   }
+   
+   const hitesh = new User("h@hitesh.ai", "abc")
+   console.log(hitesh.email);
 
-}
+   
+//method getter_setter use :in case i dont want to use access of properies here like in case we dont want to give the acces of password (fine grain)
+
+//define property "function base get set" 
+function User(email, password){
+       this._email = email;
+       this._password = password
+   
+       Object.defineProperty(this, 'email', {
+           get: function(){
+               return this._email.toUpperCase()
+           },
+           set: function(value){
+               this._email = value
+           }
+       })
+       Object.defineProperty(this, 'password', {
+           get: function(){
+               return this._password.toUpperCase()
+           },
+           set: function(value){
+               this._password = value
+           }
+       })
+   
+   }
+   
+   const chai = new User("chai@chai.com", "chai")
+   
+   console.log(chai.email);
+
+
+   //Object base get set 
+   const User = {
+       _email: 'h@hc.com',
+       _password: "abc",
+   
+   
+       get email(){
+           return this._email.toUpperCase()
+       },
+   
+       set email(value){
+           this._email = value
+       }
+   }
+   
+   const tea = Object.create(User)
+   console.log(tea.email);
+
+
+   //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// topics to cover own highger order function in js 
+
+
+
