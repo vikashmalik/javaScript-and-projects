@@ -1,7 +1,7 @@
-* domain https://server3.webhostmost.com:2222/evo/
-malik9996999
+// * domain https://server3.webhostmost.com:2222/evo/
+// malik9996999
+console.log("hello harry");
 
-// console.log("hi")
 // let a ={
 //     name:"vikash",
 //     class:"5th",
@@ -129,76 +129,76 @@ malik9996999
 // let awit2= await a2();
 
 // return [a(),a2()]
-Events On DOM
-let jsbtn= document.getElementById("btn")
-jsbtn.addEventListener("mouseover",()=>{console.log("i am overed!!!")})
+// Events On DOM
+// let jsbtn= document.getElementById("btn")
+// jsbtn.addEventListener("mouseover",()=>{console.log("i am overed!!!")})
 
-document.querySelector(".container").addEventListener("click",(e)=>{
-    alert("container is clicked",e.stopPropagation())
-})
-document.querySelector(".childContainer").addEventListener("click", (e) => {
-    e.stopPropagation();
+// document.querySelector(".container").addEventListener("click",(e)=>{
+//     alert("container is clicked",e.stopPropagation())
+// })
+// document.querySelector(".childContainer").addEventListener("click", (e) => {
+//     e.stopPropagation();
 
-    document.body.classList.add("my-class");
+//     document.body.classList.add("my-class");
 
-    e.currentTarget.style.backgroundColor = "red";
-    setTimeout(()=>{
-        alert("child container clicked")
-    },1000)
-});
-let element = document.querySelector(".childContainer");
+//     e.currentTarget.style.backgroundColor = "red";
+//     setTimeout(()=>{
+//         alert("child container clicked")
+//     },1000)
+// });
+// let element = document.querySelector(".childContainer");
 
-document.querySelector(".child").addEventListener("click",(x)=>{
-    (x.stopPropagation());
+// document.querySelector(".child").addEventListener("click",(x)=>{
+//     (x.stopPropagation());
     
-})
-============
-await
-let p = (async (params) => {
-    new Promise((resolve, reject) => {
-        console.log("hello"),
-            resolve("hello resolve")
-        // reject(new Error("err"))
-    }).then((error) => {
-        params = {
-            name: "vikash"
-        }
-        if (typeof (params) === "object") {
-            console.log("param is 5", typeof (params))
-        }
-    }).then((error) => {
-        console.log("err held1")
-    }).then((error) => {
-        console.log("err held11")
-    }).then((error) => {
-        console.log("err held11")
-    }).then((error) => {
-        console.log("err held22")
-    })
-    setTimeout(() => { console.log("hello set time out") }, 3000)
+// })
+// ============
+// await
+// let p = (async (params) => {
+//     new Promise((resolve, reject) => {
+//         console.log("hello"),
+//             resolve("hello resolve")
+//         // reject(new Error("err"))
+//     }).then((error) => {
+//         params = {
+//             name: "vikash"
+//         }
+//         if (typeof (params) === "object") {
+//             console.log("param is 5", typeof (params))
+//         }
+//     }).then((error) => {
+//         console.log("err held1")
+//     }).then((error) => {
+//         console.log("err held11")
+//     }).then((error) => {
+//         console.log("err held11")
+//     }).then((error) => {
+//         console.log("err held22")
+//     })
+//     setTimeout(() => { console.log("hello set time out") }, 3000)
 
-})
-let wait = (async () => {
-    await p()
-    console.log("hello wait")
-})()
-// delete is an oprator in array
-let a =[1,2,3,4,5,6,7,8,9,0]
-delete a[0  ]
-console.log(a,typeof(a))
-===========
-Call back//A callback(a ter,) is a function passed as an argument to another function.
-//where to use:where one function has to wait for another function (like waiting for a file to load).
-let a=()=>{
-    console.log("hello a")
+// })
+// let wait = (async () => {
+//     await p()
+//     console.log("hello wait")
+// })()
+// // delete is an oprator in array
+// let a =[1,2,3,4,5,6,7,8,9,0]
+// delete a[0  ]
+// console.log(a,typeof(a))
+// ===========
+// Call back//A callback(a ter,) is a function passed as an argument to another function.
+// //where to use:where one function has to wait for another function (like waiting for a file to load).
+// let a=()=>{
+//     console.log("hello a")
 
-}
-let b=()=>{
-    console.log("hello b")
+// }
+// let b=()=>{
+//     console.log("hello b")
 
-}
-a(b())
-================
+// }
+// a(b())
+// ================
 //The HTML DOM (Document Object Model)
 //When a web page is loaded, the browser creates a Document Object Model of the page.
 // In the DOM, all HTML elements are defined as objects.
@@ -211,105 +211,104 @@ a(b())
 //Data validation is the process of ensuring that user input is clean, correct, and useful.
 //document.getElementById(id).style.property = new style
 
-//form validation
-let validateForm = () => {
-    let fname = document.forms["myForm"]["fname"].value;
-    if (!fname) {
-      alert("Please fill out the name field first.");
-      return false; // Prevent form submission
-    }
-    return true; // Allow form submission
-  };
+// //form validation
+// let validateForm = () => {
+//     let fname = document.forms["myForm"]["fname"].value;
+//     if (!fname) {
+//       alert("Please fill out the name field first.");
+//       return false; // Prevent form submission
+//     }
+//     return true; // Allow form submission
+//   };
 
   //get req. from server
   //post req. to submit the data (sequare/sensitive data/alot of data/file)
   //put to update the data
   // delete req to delete the data 
-  //option req to fatch meta data
+//   //option req to fatch meta data
 
-====
-Notes:In JavaScript, "data parsing" usually refers to the process of converting data from one format to another, making it more usable within your code. Here are a few common examples:
-1. JSON Parsing:
-JSON.parse(): This method converts a JSON string into a JavaScript object. 
-2. String Parsing:
-Extracting information from a string: You can use various string methods like split(), substring(), indexOf(), etc., to extract specific parts of a string.
-========================================
+// ====
+// Notes:In JavaScript, "data parsing" usually refers to the process of converting data from one format to another, making it more usable within your code. Here are a few common examples:
+// 1. JSON Parsing:
+// JSON.parse(): This method converts a JSON string into a JavaScript object. 
+// 2. String Parsing:
+// Extracting information from a string: You can use various string methods like split(), substring(), indexOf(), etc., to extract specific parts of a string.
+// ========================================
 
-some extended examples :
+// some extended examples :
 
-    let a={
-        prop1:"i am a ",
-        prop2:"i am js created",
-        prop3: 2,
-    }
-console.log(Object.values(a.prop1.toLocaleUpperCase()))
+//     let a={
+//         prop1:"i am a ",
+//         prop2:"i am js created",
+//         prop3: 2,
+//     }
+// console.log(Object.values(a.prop1.toLocaleUpperCase()))
 
 
-function fetchData() {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        const data = { id: 1, name: "Vikash Malik", profession: "Front-End Developer" };
-        resolve(data); // Resolve the promise with the data
-      }, 2000); // Simulate a 2-second delay
-    });
-  }
+// function fetchData() {
+//     return new Promise((resolve, reject) => {
+//       setTimeout(() => {
+//         const data = { id: 1, name: "Vikash Malik", profession: "Front-End Developer" };
+//         resolve(data); // Resolve the promise with the data
+//       }, 2000); // Simulate a 2-second delay
+//     });
+//   }
   
-  // Async function to fetch and process data
-  async function getData() {
-    try {
-      console.log("Fetching data...");
-      const data = await fetchData(); // Wait for the promise to resolve
-      console.log("Data received:", data);
-      return data; // Return the data for further use
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      throw error; // Handle errors
-    }
-  }
+//   // Async function to fetch and process data
+//   async function getData() {
+//     try {
+//       console.log("Fetching data...");
+//       const data = await fetchData(); // Wait for the promise to resolve
+//       console.log("Data received:", data);
+//       return data; // Return the data for further use
+//     } catch (error) {
+//       console.error("Error fetching data:", error);
+//       throw error; // Handle errors
+//     }
+//   }
   
-  // Call the async function
-  getData()
-    .then((data) => {
-      console.log("Data processing complete:", data);
-    })
-    .catch((error) => {
-      console.error("Error in data processing:", error);
-    });
+//   // Call the async function
+//   getData()
+//     .then((data) => {
+//       console.log("Data processing complete:", data);
+//     })
+//     .catch((error) => {
+//       console.error("Error in data processing:", error);
+//     });
 
 
-    ========
-    map const fruits = [
-  {name:"apples", quantity:300},
-  {name:"bananas", quantity:500},
-  {name:"oranges", quantity:200},
-  {name:"kiwi", quantity:150}
-];
+//     ========
+//     map const fruits = [
+//   {name:"apples", quantity:300},
+//   {name:"bananas", quantity:500},
+//   {name:"oranges", quantity:200},
+//   {name:"kiwi", quantity:150}
+// ];//array of object seems 
 
-// Callback function to Group Elements
-function myCallback({ quantity }) {
-  return quantity > 200 ? "ok" : "low";
-}
+// // Callback function to Group Elements
+// function myCallback({ quantity }) {
+//   return quantity > 200 ? "ok" : "low";
+// }
 
-// Group by Quantity
-const result = Map.groupBy(fruits, myCallback);
-====map
-c=[4111,2,3,4,5,6,7,8,9]
+// // Group by Quantity
+// const result = Map.groupBy(fruits, myCallback);
+// ====map
+// c=[4111,2,3,4,5,6,7,8,9]
 
-c.map((value,index,array)=>{
-    console.log(e)
-})
-console.log(a)
+// c.map((value,index,array)=>{
+//     console.log(e)
+// })
+// console.log(a)
 
-==================================
+// ==================================
 //Todo
 // //77,84 code with harry siga 
 //fatch api
 //
 //random passwor genrator 
-// https://www.techmagnate.com/careers/html-developer-jobs-delhi.html send link to vinita
 // A package in Node.js contains all the files you need for a module.//Every action on a computer is an event
 
-// Modules are JavaScript libraries you can include in your projecle
+// Modules are JavaScript libraries you can include in your project
 // Simulate fetching data from an API after a delay
 
 
@@ -341,7 +340,7 @@ console.log(a)
 // }
 // loadScript("https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css")
 //====================================================================================================
-let std = ["a","b","c"]
+// let std = ["a","b","c"]
 
 // console.log(std.toString() + "\n" + std.length)
 // console.log(std.push("hello")  + std)

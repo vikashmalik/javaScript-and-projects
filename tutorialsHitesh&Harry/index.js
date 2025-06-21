@@ -1,3 +1,7 @@
+// 80% Coding, 20% Theory → Build more, watch fewer tutorials.
+
+
+
 //+++ By HItesh chai or code 
 
 // function myf(){
@@ -44,7 +48,7 @@
 
 // console.log(person.fulName?.fname?.lname.chain);
 //? use to checkif the propery does exsist same like "hasOWn"
-// let obj3={obj1,obj2}// concettination
+// let obj3={obj1,obj2}// concetination
 //let obj3 ={}
 // console.log(Object.entries(obj1));//Returns an array of key/& values of the enumerable own properties of an object
 //log(obj1.hasOwnProperty('lname))
@@ -59,7 +63,7 @@
 // //Object in arrow function {required } 
 //  const add2=(n1,n2)=> ({name:"vik"})
 // console.log(add2(1,2));
-// (()=>{`${nmae}`})("vikash");     //ifee immideate fun invocation & use to ignore GlobleScope pollution need to add ";" to stop that iife
+// (()=>{`${name}`})("vikash");     //ifee immideate fun invocation & use to ignore GlobleScope pollution need to add ";" to stop that iife
 
 
 // Browser Execution phase
@@ -113,7 +117,7 @@
 
 
 // Reduce method 
-
+//reduce(()=>{},permeter)
 // let x = [10,123,1,1]
 //  let rArr = [1,2,3,4];
 //  let initalVal = 0;
@@ -121,7 +125,7 @@
 //  let rMethod = x.reduce((a,b)=> {
 //  console.log(`${a}   and  ${b}`);
 
-//     return a + b
+//     return a + b// 0+10 >then> 10+123
 //   },initialVal) 
 
 
@@ -170,11 +174,12 @@
 
 // let parentDiv = document.querySelector(".parent") 
 
-// console.log(parentDiv.children)  // result are more likely array but nnot array
+// console.log(parentDiv.children)  // result are more likely array but not array, will be nodeElement
 // console.log(parentDiv.children[1]) // will access there properties (o/p div.week-day)
 // console.log(parentDiv.children[1].innerText) //innerHTML will access content inside
 // console.log(parentDiv.children[1].style.color="red");
 // let nodeElement = (parentDiv.children);
+
 // //nextElementSibling 
 // console.log("NODES: ", parentDiv.childNodes);
 // let h1 = document.createElement('h3')
@@ -193,15 +198,14 @@ console.log("hello");
 
 
 
-// Events in DOM**************************************************
-
+// Events in DOM******
 // // node list and html collections are two diff thing forEach((loop)=>{call back fn},false
 //true[event propagation/ bubbling default is  false] ) could be perform on node list 
 
-//type(keybord types eent, moue event, timeStemp, defaultPreventred (to control the default behaviour of elements or navigation of link tag and window behavior of browser))
+//type(keybord type event, mouse event, timeStemp, defaultPreventred (to control the default behaviour of elements or navigation of link tag and window behavior of browser))
 //target, toElement, srcElement, currentTarget
 // screen/clientX, clintY
-//altKey, ctrlKey, shiftKey, keyCode (likea,b,c,d,...)
+//altKey, ctrlKey, shiftKey, keyCode (like a,b,c,d,...)
 
 
 // // project 1 color picker 
@@ -212,12 +216,12 @@ console.log("hello");
 
 //  list_item.forEach(function (lst) {
 //     console.log(lst);
-//     lst.addEventListener('mouseover', function(e) {
+//     lst.addEventListener('click', function(e) {
 //         console.log(e)
-//         if (e.target.className === 'list-item red') { //className returns the full string ("list-item red"), not just "red"
+//         if (e.target.className === 'list-item red') {               //className returns the full string ("list-item red"), not just "red"
 //             body.style.backgroundColor = 'red'
 //         }
-//         else if(lst.id.contains === 'blue'){
+//         else if(lst.id.contains === 'blue'){                       //another method
 //               body.style.backgroundColor = e.target.id;
 
 //         }
@@ -252,31 +256,24 @@ console.log("hello");
 
 
 
-////=====================================================================================================================
-////
+//******/
 //api////// api.github randomuser. me 
 // there is alot of data in the api can read in the form of aex and son file   to read that data we are going to use the website kinda recomdation only "son formatter "
 
-//XMLHttpRequest (XHR) objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh. 
+// XMLHttpRequest (XHR) objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh. 
 // This enables a Web page to update just part of a page without disrupting what the user is doing.
+
 // Events******
 // abort = Fired when a request has been aborted XMLHttpRequest.abort().
-
 // error =
-
 // load = Fired when an XMLHttpRequest transaction completes successfully.the onload event .
-
 // loadend = Fired when a request has completed, whether successfully (after load) or unsuccessfully (after abort or error). Also available via the onloadend event handler property.
-
 // loadstart = Fired when a request has started to load data. Also available via the onloadstart event handler property.
-
 // progress = Fired periodically when a request receives more data. Also available via the onprogress event handler property.
-
 // readystatechange =  Fired whenever the readyState property changes. Also available via the onreadystatechange event handler property.
-
 // timeout = Fired when progress is terminated due to preset time expiring. Also available via the ontimeout event handler property.
-
 // Holds the status of the XMLHttpRequest.
+
 //State
 // 0: unsend            open()request not initialized
 // 1: OPENED            open() server connection established
@@ -284,13 +281,18 @@ console.log("hello");
 // 3: LOADING           processing request
 // 4: DONE              request finished and response is ready
 
-// data data = Number/String/JSON.parse(this.stringFromURL) // .parseto change the string in number/string and JSON 
+// data data = Number/String/JSON.parse(this.stringFromURL) // .parse to change the string in number/string and JSON 
 
-//V8 engine      github/v8     Console.log====================
-// its a dev tool nt a part of JS
+//V8 engine      github/v8     Console.log
+// // its a dev tool nt a part of JS(not true need more r&d)
+// const http = require('http');
+// const server = http.createServer((req, res) => {
+//   res.writeHead(200, { 'Content-Type': 'text/plain' });
+//   res.end('Hello, Node.js!');
+// });
+// server.listen(3000, () => console.log('Server running on http://localhost:3000'));
 
-
-//FETCH//Promises =6.22.00 hitesh part 2========================================================================
+//FETCH//Promises =6.22.00 hitesh part 2
 // Rad this once https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch
 
 //The fetch() method of the Window interface starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available.
@@ -533,80 +535,80 @@ The new object is returned: After the constructor function has been called, if i
 // }
 
 // getter_setter:: In JavaScript, the getter and to acces the object properties but in the different ways and set to setting up the property
-class User {                                     // mostly used n
-       constructor(email, password){
-           this.email = email;
-           this.password = password
-       }
+// class User {                                     // mostly used n
+//        constructor(email, password){
+//            this.email = email;
+//            this.password = password
+//        }
    
-       get email(){
-           return this._email.toUpperCase()
-       }
-       set email(value){
-           this._email = value
-       }
+//        get email(){
+//            return this._email.toUpperCase()
+//        }
+//        set email(value){
+//            this._email = value
+//        }
    
-       get password(){
-           return `${this._password}hitesh`
-       }
+//        get password(){
+//            return `${this._password}hitesh`
+//        }
    
-       set password(value){
-           this._password = value
-       }
-   }
+//        set password(value){
+//            this._password = value
+//        }
+//    }
    
-   const hitesh = new User("h@hitesh.ai", "abc")
-   console.log(hitesh.email);
+//    const hitesh = new User("h@hitesh.ai", "abc")
+//    console.log(hitesh.email);
 
    
 //method getter_setter use :in case i dont want to use access of properies here like in case we dont want to give the acces of password (fine grain)
 
 //define property "function base get set" 
-function User(email, password){
-       this._email = email;
-       this._password = password
+// function User(email, password){
+//        this._email = email;
+//        this._password = password
    
-       Object.defineProperty(this, 'email', {
-           get: function(){
-               return this._email.toUpperCase()
-           },
-           set: function(value){
-               this._email = value
-           }
-       })
-       Object.defineProperty(this, 'password', {
-           get: function(){
-               return this._password.toUpperCase()
-           },
-           set: function(value){
-               this._password = value
-           }
-       })
+//        Object.defineProperty(this, 'email', {
+//            get: function(){
+//                return this._email.toUpperCase()
+//            },
+//            set: function(value){
+//                this._email = value
+//            }
+//        })
+//        Object.defineProperty(this, 'password', {
+//            get: function(){
+//                return this._password.toUpperCase()
+//            },
+//            set: function(value){
+//                this._password = value
+//            }
+//        })
    
-   }
+//    }
    
-   const chai = new User("chai@chai.com", "chai")
+//    const chai = new User("chai@chai.com", "chai")
    
-   console.log(chai.email);
+//    console.log(chai.email);
 
 
    //Object base get set 
-   const User = {
-       _email: 'h@hc.com',
-       _password: "abc",
+//    const User = {
+//        _email: 'h@hc.com',
+//        _password: "abc",
    
    
-       get email(){
-           return this._email.toUpperCase()
-       },
+//        get email(){
+//            return this._email.toUpperCase()
+//        },
    
-       set email(value){
-           this._email = value
-       }
-   }
+//        set email(value){
+//            this._email = value
+//        }
+//    }
    
-   const tea = Object.create(User)
-   console.log(tea.email);
+//    const tea = Object.create(User)
+//    console.log(tea.email);
 
 
    //clouser and lexical scoping ///icase the inner function's full lexical scope will transefer to the meta/ parent function 
@@ -691,10 +693,34 @@ function User(email, password){
 
 
 
+//80% Coding, 20% Theory → Build more, watch fewer tutorials.
 
 
+// ToDos
 // topics to cover own highger order function in js 
 // function refrance and function call
 
+//Closures, hoisting, event loop, this keyword.
+// Prototypes, classes, inheritance.
+// call(), apply(), bind()
+// DOM Manipulation (if frontend-focused):
 
+// Event delegation, localStorage(https://javascript.info/localstorage), sessionStorage.
+
+// Intersection Observer, Web Components.
+
+// async function getData() {
+//    const url = "https://example.org/products.json";
+//    try {
+//      const response = await fetch(url);
+//      if (!response.ok) {
+//        throw new Error(`Response status: ${response.status}`);
+//      }
+ 
+//      const json = await response.json();
+//      console.log(json);
+//    } catch (error) {
+//      console.error(error.message);
+//    }
+//  }
 
