@@ -68,29 +68,14 @@
             </div>
         </div>
     </div>
-    <code><pre>
-      let grandparent=document.getElementById('one')
-        let parent=document.getElementById('two')
-        let child=document.getElementById('three')
-        grandparent.addEventListener('click',function(e){
-            e.stopPropagation()
-            console.log("Grandparent Clicked")
-        })
-        parent.addEventListener('click',function(e){
-            e.stopPropagation()
-            console.log("Parent Clicked")
-        })
-        child.addEventListener('click',function(e){
-            e.stopPropagation()
-            console.log("Child Clicked")
-        })
-    </pre></code>
+    
             </strong></p>
       </div>
     </div>
       <script src="index.js"></script>
       <script src="harry.js"></script>
       <script>
+        //EVENT Bubbling example 
         let grandparent=document.getElementById('one')
         let parent=document.getElementById('two')
         let child=document.getElementById('three')
