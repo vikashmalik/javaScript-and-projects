@@ -724,3 +724,16 @@ The new object is returned: After the constructor function has been called, if i
 //    }
 //  }
 
+let xArr =["a","w","e",1,2,3,3,3,3,3,]
+let xfun = ()=>{
+   q = 0;
+   
+} 
+
+let yfun = (xfun)=>{
+   console.log("hello y");
+   setTimeout(()=>{
+   xfun()
+},1000)
+} 
+yfun(xfun)

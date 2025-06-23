@@ -40,6 +40,78 @@
         <li class="list-item blue" id="blue"></li>
         <li class="list-item white"></li>
       </ul>
+      <div>
+        <h2>Event loop</h2>
+          <div class="event-div">
+            <img src="imgs/Event-Loop-in-JavaScript.jpg" alt="" class="event-img">
+              <ul>
+                <li>Call Stack: where function execution is managed in a Last-In, First-Out (LIFO) order.</li>
+                <li>Web APIs (or Background Tasks) : setTimeout, setInterval, fetch, DOM events, and other non-blocking operations</li>
+                <li>Callback Queue (Task Queue): When an asynchronous operation is completed, its callback is pushed into the task queue.</li>
+                <li>Microtask Queue: Promises and other microtasks go into the microtask queue, which is processed before the task queue.</li>
+                <li><strong>Event Loop: It continuously checks the call stack and, if empty, moves tasks from the queue to the stack for execution.</strong></li>
+              </ul>
+            </img>
+          </div>
+          <h2>Event bubbling</h2>
+          <p>Event bubbling in JavaScript is a mechanism where an event triggered on a child element propagates upward through its ancestors in the DOM. 
+            It allows parent elements to respond to events triggered by their child elements.</p>
+            <p><strong>To stop event bubbling, you can use the event e.stopPropagation() method in the event handler. This prevents the event from propagating to parent elements, so only the target element's event listener is triggered.
+              <code><html>
+<head>
+    <style>
+        *{
+            margin: 25px;
+            box-sizing: border-box;
+        }
+        .grandparent{
+            height: 350px;
+            width: 350px;
+            border: 2px solid red;
+        }
+        .parent{
+            height: 250px;
+            width: 250px;
+            border: 2px solid blue;
+        }
+        .child{
+            height: 150px;
+            width: 150px;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class="grandparent" id="one">
+        Grandparent
+        <div class="parent" id="two">
+            Parent
+            <div class="child" id="three">
+                Child
+            </div>
+        </div>
+    </div>
+    <script>
+        let grandparent=document.getElementById('one')
+        let parent=document.getElementById('two')
+        let child=document.getElementById('three')
+        grandparent.addEventListener('click',function(e){
+            e.stopPropagation()
+            console.log("Grandparent Clicked")
+        })
+        parent.addEventListener('click',function(e){
+            e.stopPropagation()
+            console.log("Parent Clicked")
+        })
+        child.addEventListener('click',function(e){
+            e.stopPropagation()
+            console.log("Child Clicked")
+        })
+    </script>
+</body>
+</html></code>
+            </strong></p>
+      </div>
     </div>
       <script src="index.js"></script>
       <script src="harry.js"></script>
