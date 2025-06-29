@@ -402,3 +402,9 @@ console.log("hello harry");
 // }  
 // hello1()
 
+let obj1 ={
+  name : "m",
+  age : 32
+}
+let obj1V  = obj1.name.lastIndexOf()
+console.log(obj1V + "https://smartapply.indeed.com/beta/indeedapply/form/questions-module/questions/1");

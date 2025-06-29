@@ -1,0 +1,8 @@
+TypeScript adds syntax on top of JavaScript, allowing developers to add types.
+
+TypeScript allows specifying the types of data being passed around within the code, and has the ability to report errors when the types don't match.
+
+*TypeScript uses compile time type checking. Which means it checks if the specified types match before running the code, not while running the code.
+
+TypeScript is transpiled into JavaScript using a compiler.(need to install compiler but VScode have already installed)
+
