@@ -192,9 +192,8 @@
 // h1.style.color="green"
 // document.body.appendChild(h1)
 
-console.log("hello");
 
-//hitesh 2:02
+//hitesh 2:02 part 2
 
 
 
@@ -692,7 +691,6 @@ The new object is returned: After the constructor function has been called, if i
 
 
 
-
 //80% Coding, 20% Theory → Build more, watch fewer tutorials.
 
 
@@ -724,16 +722,16 @@ The new object is returned: After the constructor function has been called, if i
 //    }
 //  }
 
-let xArr =["a","w","e",1,2,3,3,3,3,3,]
-let xfun = ()=>{
-   q = 0;
+// let xArr =["a","w","e",1,2,3,3,3,3,3,]
+// let xfun = ()=>{
+//    q = 0;
    
-} 
+// } 
 
-let yfun = (xfun)=>{
-   console.log("hello y");
-   setTimeout(()=>{
-   xfun()
-},1000)
-} 
-yfun(xfun)
+// let yfun = (xfun)=>{
+//    console.log("hello y");
+//    setTimeout(()=>{
+//    xfun()
+// },1000)
+// } 
+// yfun(xfun)
