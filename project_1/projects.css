@@ -1,0 +1,46 @@
+body {
+  background: #294a54;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.container .panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  margin: 5px;
+  border-radius: 10%;
+  flex: 0.5;
+  position: relative;
+  transition: flex 0.7s ease-in;
+  cursor: pointer;
+}
+.container .panel span {
+  opacity: 0;
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  transition: 0.8 ease-in;
+}
+.container .panel.active {
+  flex: 5;
+}
+.container .panel.active span {
+  opacity: 1;
+}/*# sourceMappingURL=projects.css.map */
