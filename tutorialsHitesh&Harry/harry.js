@@ -11,7 +11,6 @@ console.log("hello harry");
 //     },
 //         bact="play football"
 //     ]
-
 // }
 // console.log(a.fun)
 // let arr=(

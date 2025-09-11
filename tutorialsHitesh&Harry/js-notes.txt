@@ -11,7 +11,6 @@ malik9996999
 //     },
 //         bact="play football"
 //     ]
-
 // }
 // console.log(a.fun)
 // let arr=(
@@ -402,4 +401,17 @@ let std = ["a","b","c"]
 //     console.log("hello1111")
 // }  
 // hello1()
+
+
+
+
+
+
+
+
+a
+
+
+
+
 
