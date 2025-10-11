@@ -1,0 +1,29 @@
+body{
+    background: #000;color: aliceblue;
+}
+a{
+    color:aquamarine ;
+}
+a:active{
+    color: green ;
+}
+a:hover{
+    color: red;
+}
+
+a:visited{
+    color:ghostwhite ;
+}
+#div3{
+    color: red;
+}
+
+input{
+    color: red;
+}
+input[type="text"]::placeholder{
+    color: yellow;
+}
+select{
+    color: aqua;
+}

@@ -3,6 +3,7 @@
 
 
 //+++ By HItesh chai or code 
+// Comparison Functions reaad css
 
 // function myf(){
 //     x= 1 
