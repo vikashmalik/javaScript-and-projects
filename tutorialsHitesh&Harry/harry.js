@@ -1,3 +1,7 @@
+// The JavaScript syntax defines two types of values:
+
+// Literals (Fixed values)
+// Variables (Variable values)
 // * domain https://server3.webhostmost.com:2222/evo/
 // malik9996999
 console.log("hello harry");
