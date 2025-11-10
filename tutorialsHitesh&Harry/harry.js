@@ -6,6 +6,7 @@
 // malik9996999
 console.log("hello harry");
 
+
 // let a ={
 //     name:"vikash",
 //     class:"5th",
@@ -16,6 +17,45 @@ console.log("hello harry");
 //         bact="play football"
 //     ]
 // }
+// let arr = ["a","b","c"]
+// arr.push("hellopushed ")
+// arr.splice
+// console.log(typeof (arr) + "\n" + arr.length  + "\n" + arr[0] + arr.toString()+ typeof(arr) + arr.sort() + arr.length
+
+// );
+// for(let i=0;i<arr.length;i++){
+// console.log(arr[i]);
+// }
+
+// let obj = {
+//   objP1 : "i am a property",
+//   objP2 : "i am property 2",
+// }
+// console.log(typeof (obj));
+
+// let x=6;
+// if(x===5){
+//   console.log("x is" );
+//   if(x= true){
+//     console.log("x is true value ");
+    
+//   }
+// }
+// else if (x<5) {
+//   console.log("x is grater than 5");
+  
+// } else {
+//   console.log("move forward");
+  
+// }{
+//   console.log("x is n ot 5");
+  
+// }
+  // ( ()=>{
+  //   console.log("iffe   arrow fun");
+    
+  // })()
+  
 // console.log(a.fun)
 // let arr=(
 //     "a,b,c,d,ff,g"
@@ -49,9 +89,21 @@ console.log("hello harry");
 //       return this.firstName + " " + this.lastName;
 //     }
 //   }
+// //object constructor function
+function PPerson(name,lname,height){
+  this.name = name;
+  this.lname = lname;
+}
+const myName =  new PPerson("vikas", "malik");
+console.log(myName.lname);
 
-//map
+// The Map Object
+// A Map object holds key-value pairs where the keys can be any datatype.
 
+// A Map also remembers the original insertion order of the keys.
+let aMap = new Map([
+  
+])
 // let a = new Map(
 //     [
 //         ["b",500],
@@ -405,9 +457,9 @@ console.log("hello harry");
 // }  
 // hello1()
 
-let obj1 ={
-  name : "m",
-  age : 32
-}
-let obj1V  = obj1.name.lastIndexOf()
-console.log(obj1V + "https://smartapply.indeed.com/beta/indeedapply/form/questions-module/questions/1");
+// let obj1 ={
+//   name : "m",
+//   age : 32
+// }
+// let obj1V  = obj1.name.lastIndexOf()
+// console.log(obj1V + "https://smartapply.indeed.com/beta/indeedapply/form/questions-module/questions/1");
