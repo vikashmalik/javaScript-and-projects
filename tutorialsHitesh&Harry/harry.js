@@ -463,3 +463,11 @@ let aMap = new Map([
 // }
 // let obj1V  = obj1.name.lastIndexOf()
 // console.log(obj1V + "https://smartapply.indeed.com/beta/indeedapply/form/questions-module/questions/1");
+let a = 5;
+let arr=[1,2,3,4,5,6,7,8,90]
+console.log(typeof arr);
+console.log(arr.length);
+
+let cars= [
+  let
+]
