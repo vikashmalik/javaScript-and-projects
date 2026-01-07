@@ -45,7 +45,87 @@ console.log(name1.substring(0,4));// h will not include  slice(wer can povide th
 //Arrays are ordered collections of values (elements) that can hold any data type - numbers, strings, objects, other arrays, functions, etc.
 // 
 
-const myArr = [0,1,true,"vikash"]
+// Method 1: Array literal (most common)
+let fruits = ["apple", "banana", "orange","banana"];
+
+// Method 2: Array constructor
+let numbers = new Array(1, 2, 3);
+
+// Empty array
+let empty = [];
+
+// Array with mixed types
+let mixed = [1, "hello", true, {name: "John"}, [1, 2, 3]];
+// Modifying elements
+fruits[1] = "mango";  
+console.log(fruits)
+
+fruits.push('kiwi')// Add to end
+
+console.log(fruits)
+fruits.pop()// Remove from end
+console.log(fruits)
+
+fruits.shift()// Remove from beginning
+console.log(fruits)
+
+fruits.unshift('jolo')// Add to beginning
+console.log(fruits)
+
+fruits.splice(1,0,'mango')// Remove/Add at specific position
+console.log(fruits)
+// splice(startIndex, deleteCount, itemsToAdd...)
+
+//**Finding Elements
+
+console.log(fruits.indexOf("banana"));     // 1
+console.log(fruits.lastIndexOf("mango")); // 3
+console.log(fruits.includes("apple"));     // true
+console.log(fruits.find(fruit => fruit.startsWith("o"))); // "orange"
+console.log(fruits.findIndex(fruit => fruit === "orange")); // 2
 
 
+
+let smilerMethodToFind= ()=>{
+    const numbers = [1, 2, 3, 4, 5];
+
+numbers.find(n => n > 2);    // 3 (element)
+numbers.filter(n => n > 2);  // [3, 4, 5] (array)
+numbers.some(n => n > 2);    // true (boolean)
+numbers.findIndex(n => n > 2); // 2 (index)
+// Method	Returns	Stops on first      match	Returns element/array
+// find()	First   matching element	Yes	    Element
+// filter()	All     matching elements	No	    Array
+// some()	Boolean	Yes             	        Boolean
+// findIndex()	    Index of first    match	    Yes	Number
+}
+
+let usefullPatternsOfArray2modrenES6 = ()=>{
+    // flat() - Flatten nested arrays
+let nested = [1, [2, [3, [4]]]];
+console.log(nested.flat(2)); // [1, 2, 3, [4]]
+
+// flatMap() - Map then flatten
+let arr = [1, 2, 3];
+console.log(arr.flatMap(x => [x, x * 2])); // [1, 2, 2, 4, 3, 6]
+
+// Array.from() - Create from array-like or iterable
+console.log(Array.from("hello")); // ["h", "e", "l", "l", "o"]
+console.log(Array.from([1, 2, 3], x => x * 2)); // [2, 4, 6]
+// Create range
+let range = Array.from({length: 5}, (_, i) => i + 1); // [1, 2, 3, 4, 5]
+
+// Remove duplicates
+let duplicates = [1, 2, 2, 3, 4, 4, 5];
+let unique = [...new Set(duplicates)]; // [1, 2, 3, 4, 5]
+
+// Check if all elements satisfy condition
+let nums = [2, 4, 6, 8];
+console.log(nums.every(n => n % 2 === 0)); // true
+
+// Check if any element satisfies condition
+console.log(nums.some(n => n > 5)); // true
+}
+
+//=>For large arrays, consider using Set or Map for faster lookups
 
