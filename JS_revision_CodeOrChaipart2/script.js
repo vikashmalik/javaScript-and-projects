@@ -101,7 +101,7 @@ numbers.findIndex(n => n > 2); // 2 (index)
 }
 
 let usefullPatternsOfArray2modrenES6 = ()=>{
-    // flat() - Flatten nested arrays
+    // flat() - Flatten nested arrays/array of arrays
 let nested = [1, [2, [3, [4]]]];
 console.log(nested.flat(2)); // [1, 2, 3, [4]]
 
@@ -128,4 +128,234 @@ console.log(nums.some(n => n > 5)); // true
 }
 
 //=>For large arrays, consider using Set or Map for faster lookups
+// could maker arrays from(Array.from(name:"vikash")) => ['v','i','k','a','s','h']keay/value ; Array.of(return new array from set of element could var,arretc )
+// read about isArray as well
+
+
+//Objects*******Objects are collections of key-value pairs (properties) where keys are strings (or Symbols) and values can be any data type.
+ // Method 1: Object literal (most common)
+let person = {
+    name: "John",
+    age: 30,
+    isStudent: false
+};
+
+// Method 2: Object constructor
+let car = new Object();
+car.brand = "Toyota";
+car.model = "Camry";
+
+// Method 3: Constructor function
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+let john = new Person("John", 30);
+
+// Method 4: ES6 Class
+class Car {
+    constructor(brand, model) {
+        this.brand = brand;
+        this.model = model;
+    }
+}
+let myCar = new Car("Honda", "Civic");
+
+let car1 = {
+    modl : "hondaCity",
+    year : 2022,
+    mycar: function(modl,year){
+        (this.year + this.modl);
+        
+    }
+}
+
+
+let a = (car1.mycar());
+console.log(a);
+
+class classForObj{
+    constructor(brand,year){
+        this.brand = brand;
+        this.year = year;
+    }
+}
+let myObj1 = new classForObj('newcar','2020')
+console.log(myObj1.toString);
+
+
+let hello ="my name is hello"
+document.getElementsByClassName('test').innerHTML= hello;
+// document.querySelector('.test').innerHTML = myObj1.toString();
+
+let mysym = Symbol('key 1')
+console.log(typeof mysym);
+const sym1 = Symbol('key 1');
+const sym2 = Symbol('key 1');
+console.log(sym1 === sym2); // false
+
+// const tuser = new Object() > singleton type of obj
+// const tuser = {} > non singleton o/p = {}
+
+//Object nesting
+let objP={
+    child1:{
+        discription:"child1 is avl",
+        child2:{
+            child2Name:"xyz",
+            2:"hello number key"
+        }
+    }
+}
+console.log(objP.child1?.child2[2]);//2 is a number, so you can't use it with dot notation
+console.log(objP?.child1?.child2?.[2]);//full optional chain (?.) work like if else 
+
+//object concetination
+let obj3 = Object.assign({},objP,myObj1)//{}target,source1, source2;{} is optional
+// let obj4=(...objP,...myObj1)
+
+//array of object do own
+let arraysObj=[
+    {},
+    {},
+    {}
+]
+console.log(arraysObj[2].name);
+console.log(Object.keys(myObj1)); // o/p (2) ['brand', 'year'] is dataType is an array
+console.log(Object.values(myObj1)); 
+console.log(Object.entries(myObj1)); 
+console.log(myObj1.hasOwnProperty('isloggedIn')); //false
+//Destructing of object value from array of obj
+const users = [
+    { id: 1, name: 'Alice' },
+    { id: 2, name: 'Bob' },
+    { id: 3, name: 'Charlie' }
+  ];
+  
+  // Extract names from all objects
+  const names = users.map(({ name }) => name);
+  console.log(names); // ['Alice', 'Bob', 'Charlie']
+
+
+//in future the object discussion become the api discussion in future
+
+//Destructure of an object vry imp for reactas will work on this theory Obj>destructure
+let {modl} = car1
+console.log(modl);
+// aslo we can use  with diff var name 
+let {modl:modlCopy} = car1
+console.log(modlCopy);
+
+//nested destructing 
+let objPx={
+    child1x:{
+        discription:"child1 is avl",
+        child2:{
+            child2Name:"xyz",
+            2:"hello number key"
+        }
+    }
+}
+let{child1x:{
+    discription,
+    child2:{child2Name,2:iAM2}
+    
+}}=objPx
+console.log(iAM2);
+// Without destructuring
+function printPerson(person) {
+    console.log(`${person.name} is ${person.age} years old`);
+  }
+  
+  // With destructuring
+  function printPerson({ name, age }) {
+    console.log(`${name} is ${age} years old`);
+  }
+  
+  // With destructuring and defaults
+  function printPerson({ name = 'Anonymous', age = 0 } = {}) {
+    console.log(`${name} is ${age} years old`);
+  }
+  
+  printPerson(person); // "Alice is 30 years old"
+  printPerson();       // "Anonymous is 0 years old"
+
+//   Practical Use Cases
+// Without destructuring
+function printPerson(person) {
+    console.log(`${person.name} is ${person.age} years old`);
+  }
+  
+  // With destructuring
+  function printPerson({ name, age }) {
+    console.log(`${name} is ${age} years old`);
+  }
+  
+  // With destructuring and defaults
+  function printPerson({ name = 'Anonymous', age = 0 } = {}) {
+    console.log(`${name} is ${age} years old`);
+  }
+  
+  printPerson(person); // "Alice is 30 years old"
+  printPerson();       // "Anonymous is 0 years old"
+
+
+
+//React ** props destructing
+
+// Instead of:
+function UserProfile(props) {
+    return (
+      <div>
+        <h1>{props.name}</h1>
+        <p>{props.email}</p>
+      </div>
+    );
+  }
+  
+  // Use destructuring:
+  function UserProfile({ name, email }) {
+    return (
+      <div>
+        <h1>{name}</h1>
+        <p>{email}</p>
+      </div>
+    );
+  }
+  
+  // With default values:
+  function UserProfile({ name = 'Guest', email = 'No email provided' }) {
+    return (
+      <div>
+        <h1>{name}</h1>
+        <p>{email}</p>
+      </div>
+    );
+  }
+
+//   Key Points to Remember
+//   Destructuring creates new variables (not references to the original properties)
+  
+//   The property names must match exactly (case-sensitive)
+  
+//   You can combine renaming with default values: { name: userName = 'Guest' }
+  
+//   Works with let, const, and var declarations
+  
+//   Can be used in loops: for (const {name, age} of users) {...}
+  
+//   Object destructuring makes code cleaner, more readable, and helps avoid repetitive code like object.property syntax.
+  
+  
+
+
+
+
+
+
+
+
+
+
+
 
