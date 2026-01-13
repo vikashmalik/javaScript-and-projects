@@ -284,3 +284,58 @@ console.log(arrowFn(3,4));
 })('arrgumes');//iffe func tion must be end with ; to run the next iffe or code otherwise there wouldd be error  
 
 }
+
+//Conditon
+// falsy values = false, 0, -0, bigInt 0n, "", null, undefine, NaN;
+//rest are truthy value ex: "0", "false", "space", [], {}, function(){}
+const emptyObj = {usereName : 12}
+if(Object.keys(emptyObj).length ===0){
+    console.log('obj is empty');
+    
+} else{
+    console.log(Object.keys(emptyObj));// will print the key in the form of obj
+    
+}
+
+
+//(??)operator
+
+let aTestMap = new Map()
+aTestMap.set('IN','India')
+aTestMap.set('US','UIndia')
+aTestMap.set('NZ','ZIndia')
+
+ for(const[x,y] of aTestMap){ // also can do like this for(const [key,value] of aTestMap)
+    console.log(y);// will print vlaue in the form of object
+    
+ }
+
+ const myObjectForOF={
+    userName:"gamers",
+    totalGames: 12,
+ }
+
+//  for(const key of myObjectForOF){ // only owrk on array or maps
+//     console.log(key); //Uncaught TypeError: myObjectForOF is not iterable
+
+    
+//  }
+
+// so for object there is for in loop its not like it only work for the obj it use for other things as well
+
+
+for (const key in myObjectForOF) {
+    console.log(myObjectForOF[key]); // "userName", "totalGames"
+}
+//ReDo
+
+//for in also work on Arrays as well, but will not work on the masp bcz maps are not itrable 
+
+const pLang=[11,22,33,44,55]
+for (const key in pLang) {
+    console.log(key); // will print keys 0,1,2,3,4
+    console.log(pLang[key]);// will print values 11,22,33,44,55
+    
+}
+
+
