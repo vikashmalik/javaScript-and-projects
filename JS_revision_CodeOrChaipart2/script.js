@@ -369,3 +369,35 @@ myCodingLang.forEach((item,index,arr)=>{
     
 })
 
+// forEach loop does not return then in this case we will use filter(()=>{})
+let forEachValue = myCodingLang.forEach((item,index,arr)=>{
+    //console.log(item);
+    return item
+    // console.log(index);
+    
+    
+})
+console.log(forEachValue);      // undefined
+
+//filterFunction
+const newCoding = myCodingLang.filter((item)=>{
+    return item.lanName.length >1
+})
+console.log(newCoding);
+
+// 1. Filter by property value
+const jsItems = myCodingLang.filter(item => item.lanName === "JS");
+
+// 2. Filter by property containing string
+const hasJs = myCodingLang.filter(item => item.lanFileName.includes("js"));
+
+// 3. Filter by multiple conditions
+const multiFilter = myCodingLang.filter(item => {
+    return item.lanName.length > 1 && item.lanFileName.startsWith("file");
+});
+
+// 4. Filter truthy values (if property exists)
+const hasFileName = myCodingLang.filter(item => item.lanFileName);
+
+// 5. Filter by index
+const firstTwo = myCodingLang.filter((item, index) => index < 2);
