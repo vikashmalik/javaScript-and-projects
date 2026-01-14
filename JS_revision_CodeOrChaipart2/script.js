@@ -414,3 +414,46 @@ let pLangFilter = myCodingLang.filter((item, index, array) => {
 console.log(pLangFilter);
 // Output: [{ lanName: "OOps", lanFileName: "filejs2" }]
 
+//map is also a callback function 
+ let mapNumber = [1,2,3,4,5,6,7,8,9,10]
+    let newNumber = mapNumber.map((num)=>num + 10)
+    console.log(newNumber);
+
+    //chaing of methods map()=> num * 10.map( here values are num * 10).filter(true or false).forEach() etc.
+//reduce method *
+
+const myTotal = mapNumber.reduce((accumlator,currentValue)=>{
+    return accumlator + currentValue
+},0) // 0 is an intital value accumlator is an variable to make accumlator to understand we provide the initialvalue i.e 0
+
+console.log(myTotal);
+
+
+
+let course = [
+    {
+        courseName :"Js",
+        price: 999
+    },
+    {
+        courseName :"Js",
+        price: 1999
+    },
+    {
+        courseName :"Js",
+        price: 2999
+    }
+]
+
+
+let chkPrice= course.reduce((accumlator,item)=> accumlator + item.price,0); // mostly reduce use for ShopingCarts
+
+if (typeof chkPrice === 'number') {
+    console.log(chkPrice);
+    
+} else {
+ console.log("enter a valid val");
+    
+}
+
+    
