@@ -281,7 +281,7 @@ function aboutThefunction() {
     (function namedIffe() {
         console.log((`i am iffe `));
 
-    })('arrgumes');//iffe func tion must be end with ; to run the next iffe or code otherwise there wouldd be error  
+    })('arrgumes');//iffe function must be end with ; to run the next iffe or code otherwise there wouldd be error  
 
 }
 
@@ -298,15 +298,16 @@ if (Object.keys(emptyObj).length === 0) {
 }
 
 
-//(??)operator
+//(??) Nullish Coalescing Operator
+// //operator val1= null/undefined ?? 10 ?? 54 /o/p = 10 // will chk for 1st in case not avl then will print 10; used to used for the dsa or api values
 
 let aTestMap = new Map()
 aTestMap.set('IN', 'India')
 aTestMap.set('US', 'UIndia')
 aTestMap.set('NZ', 'ZIndia')
 
-for (const [x, y] of aTestMap) { // also can do like this for(const [key,value] of aTestMap)
-    console.log(y);// will print vlaue in the form of object
+for (const [keysOfaTestMap, vlauesOfaTestMap] of aTestMap) { // also can do like this for(const [key,value] of aTestMap)
+    console.log(vlauesOfaTestMap);// will print vlaue in the form of object
 
 }
 
@@ -338,18 +339,18 @@ for (const key in pLang) {
 
 }
 //for each lopp most used for array
-//parameter of lopps already injected into the js 
+//parameter of loop already injected into the js 
 const arrForEach = ["i am for Each", 55]
 arrForEach.forEach((val, index, fullArray) => { // we can give a function referance not declare only to the fpor each like forEach(printForEachFunctio)
     console.log(val, index, fullArray);
 
 })
-// Outpu =>> i am for Each 0 
+// Output =>> i am for Each 0 
 // (2) ['i am for Each', 55]
 //  55 1 
 // (2) ['i am for Each', 55]
 
-const myCodingLang= [{
+let myCodingLang= [{
         lanName:"JS",
         lanFileName:"filejs",
     },
@@ -366,7 +367,7 @@ myCodingLang.forEach((item,index,arr)=>{
     console.log(item.lanName);
     // console.log(index);
     
-    
+    //return // return a result is not allowed in forEach
 })
 
 // forEach loop does not return then in this case we will use filter(()=>{})
@@ -401,3 +402,15 @@ const hasFileName = myCodingLang.filter(item => item.lanFileName);
 
 // 5. Filter by index
 const firstTwo = myCodingLang.filter((item, index) => index < 2);
+
+//filter
+
+
+// Correct way - using proper parameter names
+let pLangFilter = myCodingLang.filter((item, index, array) => {
+    return item.lanFileName === "filejs2" && index.pLangFilter === "lPython";
+});
+
+console.log(pLangFilter);
+// Output: [{ lanName: "OOps", lanFileName: "filejs2" }]
+
