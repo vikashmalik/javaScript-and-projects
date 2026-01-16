@@ -495,3 +495,14 @@ Array.from(myListItem); // converted to an array
 myListItem.forEach((li)=>{
     console.log(li)
 })
+
+// acessing child using childer,childNode,firstChild,lastChild,firstElemenChild,lastElementChild,
+//Acessing parent from child node child.parentElement, nextElementSibling  its call traversing
+let parent = document.querySelector('.parent')
+    Array.from(parent.children).forEach((div) => div.style.color="green")
+    parent.children[1].style.color="yellow" // can save t an veriable also
+
+    for(i = 0;i < parent.children.length;i++){
+        console.log(parent.children[i].innerHTML);
+        
+    }
