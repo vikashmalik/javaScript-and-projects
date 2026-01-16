@@ -285,175 +285,213 @@ function aboutThefunction() {
 
 }
 
-//Conditon
-// falsy values = false, 0, -0, bigInt 0n, "", null, undefine, NaN;
-//rest are truthy value ex: "0", "false", "space", [], {}, function(){}
-const emptyObj = { usereName: 12 }
-if (Object.keys(emptyObj).length === 0) {
-    console.log('obj is empty');
+let conditionLoopMapReduce = function () {
+    //Conditon
+    // falsy values = false, 0, -0, bigInt 0n, "", null, undefine, NaN;
+    //rest are truthy value ex: "0", "false", "space", [], {}, function(){}
+    const emptyObj = { usereName: 12 }
+    if (Object.keys(emptyObj).length === 0) {
+        console.log('obj is empty');
 
-} else {
-    console.log(Object.keys(emptyObj));// will print the key in the form of obj
+    } else {
+        //console.log(Object.keys(emptyObj));// will print the key in the form of obj
 
-}
-
-
-//(??) Nullish Coalescing Operator
-// //operator val1= null/undefined ?? 10 ?? 54 /o/p = 10 // will chk for 1st in case not avl then will print 10; used to used for the dsa or api values
-
-let aTestMap = new Map()
-aTestMap.set('IN', 'India')
-aTestMap.set('US', 'UIndia')
-aTestMap.set('NZ', 'ZIndia')
-
-for (const [keysOfaTestMap, vlauesOfaTestMap] of aTestMap) { // also can do like this for(const [key,value] of aTestMap)
-    console.log(vlauesOfaTestMap);// will print vlaue in the form of object
-
-}
-
-const myObjectForOF = {
-    userName: "gamers",
-    totalGames: 12,
-}
-
-//  for(const key of myObjectForOF){ // only owrk on array or maps
-//     console.log(key); //Uncaught TypeError: myObjectForOF is not iterable
+    }
 
 
-//  }
+    //(??) Nullish Coalescing Operator
+    // //operator val1= null/undefined ?? 10 ?? 54 /o/p = 10 // will chk for 1st in case not avl then will print 10; used to used for the dsa or api values
 
-// so for object there is for in loop its not like it only work for the obj it use for other things as well
+    let aTestMap = new Map()
+    aTestMap.set('IN', 'India')
+    aTestMap.set('US', 'UIndia')
+    aTestMap.set('NZ', 'ZIndia')
+
+    for (const [keysOfaTestMap, vlauesOfaTestMap] of aTestMap) { // also can do like this for(const [key,value] of aTestMap)
+        console.log(vlauesOfaTestMap);// will print vlaue in the form of object
+
+    }
+
+    const myObjectForOF = {
+        userName: "gamers",
+        totalGames: 12,
+    }
+
+    //  for(const key of myObjectForOF){ // only owrk on array or maps
+    //     console.log(key); //Uncaught TypeError: myObjectForOF is not iterable
 
 
-for (const key in myObjectForOF) {
-    console.log(myObjectForOF[key]); // "userName", "totalGames"
-}
-//ReDo
+    //  }
 
-//for in also work on Arrays as well, but will not work on the masp bcz maps are not itrable 
+    // so for object there is for in loop its not like it only work for the obj it use for other things as well
 
-const pLang = [11, 22, 33, 44, 55]
-for (const key in pLang) {
-    console.log(key); // will print keys 0,1,2,3,4
-    console.log(pLang[key]);// will print values 11,22,33,44,55
 
-}
-//for each lopp most used for array
-//parameter of loop already injected into the js 
-const arrForEach = ["i am for Each", 55]
-arrForEach.forEach((val, index, fullArray) => { // we can give a function referance not declare only to the fpor each like forEach(printForEachFunctio)
-    console.log(val, index, fullArray);
+    for (const key in myObjectForOF) {
+        console.log(myObjectForOF[key]); // "userName", "totalGames"
+    }
+    //ReDo
 
-})
-// Output =>> i am for Each 0 
-// (2) ['i am for Each', 55]
-//  55 1 
-// (2) ['i am for Each', 55]
+    //for in also work on Arrays as well, but will not work on the masp bcz maps are not itrable 
 
-let myCodingLang= [{
-        lanName:"JS",
-        lanFileName:"filejs",
+    const pLang = [11, 22, 33, 44, 55]
+    for (const key in pLang) {
+        console.log(key); // will print keys 0,1,2,3,4
+        console.log(pLang[key]);// will print values 11,22,33,44,55
+
+    }
+    //for each lopp most used for array
+    //parameter of loop already injected into the js 
+    const arrForEach = ["i am for Each", 55]
+    arrForEach.forEach((val, index, fullArray) => { // we can give a function referance not declare only to the fpor each like forEach(printForEachFunctio)
+        console.log(val, index, fullArray);
+
+    })
+    // Output =>> i am for Each 0 
+    // (2) ['i am for Each', 55]
+    //  55 1 
+    // (2) ['i am for Each', 55]
+
+    let myCodingLang = [{
+        lanName: "JS",
+        lanFileName: "filejs",
     },
-{
-    lanName : "Python",
-        lanFileName : "filejs1",
-},
-{
-    lanName : "OOps",
-        lanFileName : "filejs2",
-}]
+    {
+        lanName: "Python",
+        lanFileName: "filejs1",
+    },
+    {
+        lanName: "OOps",
+        lanFileName: "filejs2",
+    }]
 
-myCodingLang.forEach((item,index,arr)=>{
-    console.log(item.lanName);
-    // console.log(index);
-    
-    //return // return a result is not allowed in forEach
-})
+    myCodingLang.forEach((item, index, arr) => {
+        console.log(item.lanName);
+        // console.log(index);
 
-// forEach loop does not return then in this case we will use filter(()=>{})
-let forEachValue = myCodingLang.forEach((item,index,arr)=>{
-    //console.log(item);
-    return item
-    // console.log(index);
-    
-    
-})
-console.log(forEachValue);      // undefined
+        //return // return a result is not allowed in forEach
+    })
 
-//filterFunction
-const newCoding = myCodingLang.filter((item)=>{
-    return item.lanName.length >1
-})
-console.log(newCoding);
-
-// 1. Filter by property value
-const jsItems = myCodingLang.filter(item => item.lanName === "JS");
-
-// 2. Filter by property containing string
-const hasJs = myCodingLang.filter(item => item.lanFileName.includes("js"));
-
-// 3. Filter by multiple conditions
-const multiFilter = myCodingLang.filter(item => {
-    return item.lanName.length > 1 && item.lanFileName.startsWith("file");
-});
-
-// 4. Filter truthy values (if property exists)
-const hasFileName = myCodingLang.filter(item => item.lanFileName);
-
-// 5. Filter by index
-const firstTwo = myCodingLang.filter((item, index) => index < 2);
-
-//filter
+    // forEach loop does not return then in this case we will use filter(()=>{})
+    let forEachValue = myCodingLang.forEach((item, index, arr) => {
+        //console.log(item);
+        return item
+        // console.log(index);
 
 
-// Correct way - using proper parameter names
-let pLangFilter = myCodingLang.filter((item, index, array) => {
-    return item.lanFileName === "filejs2" && index.pLangFilter === "lPython";
-});
+    })
+    console.log(forEachValue);      // undefined
 
-console.log(pLangFilter);
-// Output: [{ lanName: "OOps", lanFileName: "filejs2" }]
+    //filterFunction
+    const newCoding = myCodingLang.filter((item) => {
+        return item.lanName.length > 1
+    })
+    console.log(newCoding);
 
-//map is also a callback function 
- let mapNumber = [1,2,3,4,5,6,7,8,9,10]
-    let newNumber = mapNumber.map((num)=>num + 10)
+    // 1. Filter by property value
+    const jsItems = myCodingLang.filter(item => item.lanName === "JS");
+
+    // 2. Filter by property containing string
+    const hasJs = myCodingLang.filter(item => item.lanFileName.includes("js"));
+
+    // 3. Filter by multiple conditions
+    const multiFilter = myCodingLang.filter(item => {
+        return item.lanName.length > 1 && item.lanFileName.startsWith("file");
+    });
+
+    // 4. Filter truthy values (if property exists)
+    const hasFileName = myCodingLang.filter(item => item.lanFileName);
+
+    // 5. Filter by index
+    const firstTwo = myCodingLang.filter((item, index) => index < 2);
+
+    //filter
+
+
+    // Correct way - using proper parameter names
+    let pLangFilter = myCodingLang.filter((item, index, array) => {
+        return item.lanFileName === "filejs2" && index.pLangFilter === "lPython";
+    });
+
+    console.log(pLangFilter);
+    // Output: [{ lanName: "OOps", lanFileName: "filejs2" }]
+
+    //map is also a callback function 
+    let mapNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    let newNumber = mapNumber.map((num) => num + 10)
     console.log(newNumber);
 
     //chaing of methods map()=> num * 10.map( here values are num * 10).filter(true or false).forEach() etc.
-//reduce method *
+    //reduce method *
 
-const myTotal = mapNumber.reduce((accumlator,currentValue)=>{
-    return accumlator + currentValue
-},0) // 0 is an intital value accumlator is an variable to make accumlator to understand we provide the initialvalue i.e 0
+    const myTotal = mapNumber.reduce((accumlator, currentValue) => {
+        return accumlator + currentValue
+    }, 0) // 0 is an intital value accumlator is an variable to make accumlator to understand we provide the initialvalue i.e 0
 
-console.log(myTotal);
+    console.log(myTotal);
 
 
 
-let course = [
-    {
-        courseName :"Js",
-        price: 999
-    },
-    {
-        courseName :"Js",
-        price: 1999
-    },
-    {
-        courseName :"Js",
-        price: 2999
+    let course = [
+        {
+            courseName: "Js",
+            price: 999
+        },
+        {
+            courseName: "Js",
+            price: 1999
+        },
+        {
+            courseName: "Js",
+            price: 2999
+        }
+    ]
+
+
+    let chkPrice = course.reduce((accumlator, item) => accumlator + item.price, 0); // mostly reduce use for ShopingCarts
+
+    if (typeof chkPrice === 'number') {
+        console.log(chkPrice);
+
+    } else {
+        console.log("enter a valid val");
+
     }
-]
-
-
-let chkPrice= course.reduce((accumlator,item)=> accumlator + item.price,0); // mostly reduce use for ShopingCarts
-
-if (typeof chkPrice === 'number') {
-    console.log(chkPrice);
-    
-} else {
- console.log("enter a valid val");
-    
 }
+//Dom
+//The DOM API (Application Programming Interface) is a set of Methods and Properties that allow JavaScript to change the 
+// content, structure, and style of any HTML elements.
+//The document object is the owner of all other objects in your web page.
 
-    
+
+let x = (document.querySelector('h1'));
+if (x) {
+    console.log('true x', x);
+    document.querySelector('h1').style.color = "red"
+}
+//create an element
+ document.querySelector("#header").setAttribute("class",'testSetAtt header')// it will override the already class
+ document.body.style.color=""
+//document.querySelector("#header").innerHTMl/innerText/InnerCOntent
+// let uList = document.querySelector("ul")
+// let listItem = uList.querySelector('li')
+
+
+//Node list and HTml collection are not pure array , we have to make them array like all method map() will avl 
+// querySelector,getElementById/className will give you  HTML collection ,querySelectorAll will gice you node list can apply forEach() as well
+const myLi=document.querySelectorAll('li')
+myLi[1].style.cssFloat="color=red;" 
+
+let myList= document.querySelectorAll('li')
+myList.forEach((li)=> li.style.backgroundColor ="red" ) // here li is all the list item
+
+// for using map() we have to convertn the node list to the proper array    
+let myListArray = Array.from(myList)
+myListArray.map((index)=> index.innerHTML="List Items")
+
+// by using same method we can convert the html collectio as well
+
+let myListItem= document.querySelectorAll('.listItem') // give the HTML collections 
+Array.from(myListItem); // converted to an array
+myListItem.forEach((li)=>{
+    console.log(li)
+})
