@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Code or chai 4 project</h1>
+    <div class="buttons">
+        <div class="button white" id="white"></div>
+        <div class="button black"></div>
+        <div class="button green"></div>
+        <div class="button yellow"></div>
+    </div>
+    <script>
+        const buttons =document.querySelectorAll('.button')
+        console.log(buttons)
+        const body = document.querySelector('body')
+        buttons.forEach(function (button){
+            console.log(button);
+            button.addEventListener('click',function(e){
+                console.log(e);
+                console.log(e.target);
+                //e.target.className === 'white'  // false
+                // Because className would be "white btn"
+                if(e.target.classList.contains ('white')){
+                    body.style.backgroundColor= 'white';
+                    alert ("body color is white")
+                }
+                if(e.target.classList.contains ('black')){
+                    
+                    let confirmColor = confirm ("body color is black")
+                    if(confirmColor ===  true){
+                        // dont change the color keep it privious and if ok then change the color
+                        body.style.backgroundColor= 'black';
+                    }else{
+                        // alert("Color change cancelled!");
+                    }
+
+                }
+                if(e.target.classList.contains ('green')){
+                    body.style.backgroundColor= 'green';
+                }
+                if(e.target.classList.contains ('yellow')){
+                    body.style.backgroundColor= 'yellow';
+                }
+                
+            })
+        })
+    </script>
+</body>
+</html>
