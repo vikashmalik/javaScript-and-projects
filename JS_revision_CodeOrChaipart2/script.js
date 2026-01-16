@@ -469,8 +469,8 @@ if (x) {
     document.querySelector('h1').style.color = "red"
 }
 //create an element
- document.querySelector("#header").setAttribute("class",'testSetAtt header')// it will override the already class
- document.body.style.color=""
+document.querySelector("#header").setAttribute("class", 'testSetAtt header')// it will override the already class
+document.body.style.color = ""
 //document.querySelector("#header").innerHTMl/innerText/InnerCOntent
 // let uList = document.querySelector("ul")
 // let listItem = uList.querySelector('li')
@@ -478,31 +478,58 @@ if (x) {
 
 //Node list and HTml collection are not pure array , we have to make them array like all method map() will avl 
 // querySelector,getElementById/className will give you  HTML collection ,querySelectorAll will gice you node list can apply forEach() as well
-const myLi=document.querySelectorAll('li')
-myLi[1].style.cssFloat="color=red;" 
+const myLi = document.querySelectorAll('li')
+myLi[1].style.cssFloat = "color=red;"
 
-let myList= document.querySelectorAll('li')
-myList.forEach((li)=> li.style.backgroundColor ="red" ) // here li is all the list item
+let myList = document.querySelectorAll('li')
+myList.forEach((li) => li.style.backgroundColor = "red") // here li is all the list item
 
 // for using map() we have to convertn the node list to the proper array    
 let myListArray = Array.from(myList)
-myListArray.map((index)=> index.innerHTML="List Items")
+myListArray.map((index) => index.innerHTML = "List Items")
 
 // by using same method we can convert the html collectio as well
 
-let myListItem= document.querySelectorAll('.listItem') // give the HTML collections 
+let myListItem = document.querySelectorAll('.listItem') // give the HTML collections 
 Array.from(myListItem); // converted to an array
-myListItem.forEach((li)=>{
+myListItem.forEach((li) => {
     console.log(li)
 })
 
 // acessing child using childer,childNode,firstChild,lastChild,firstElemenChild,lastElementChild,
 //Acessing parent from child node child.parentElement, nextElementSibling  its call traversing
 let parent = document.querySelector('.parent')
-    Array.from(parent.children).forEach((div) => div.style.color="green")
-    parent.children[1].style.color="yellow" // can save t an veriable also
+Array.from(parent.children).forEach((div) => div.style.color = "green")
+parent.children[1].style.color = "yellow" // can save t an veriable also
 
-    for(i = 0;i < parent.children.length;i++){
-        console.log(parent.children[i].innerHTML);
-        
+for (i = 0; i < parent.children.length; i++) {
+    console.log(parent.children[i].innerHTML);
+
+}
+
+// creating new elements or node 
+let h1 = document.createElement('h1')
+console.log(h1);
+
+h1.setAttribute("titel", "Hello I am created")
+h1.innerHTML = "I am H1 attteched Child"// can give style as well , loops as well 
+// let h1Text= document.createTextNode=("I am Text Node")
+// h1.appendChild(h1Text)
+document.body.appendChild(h1)// attech to the body h1
+
+// add a new day function optimised day
+function addDay(newDay,ExtraDay){
+    let div = document.createElement('div')
+    div.classList.add('child-added')
+    // div.classList.remove('child-added')
+    div.textContent=`${newDay} ${ExtraDay}`
+    document.querySelector('.parent').appendChild(div)
+    if (div.textContent != "wow") {
+        div.classList.remove('child-added'); //.remove()
+//         div.classList.remove('add');  // Can remove later
+// div.classList.toggle('add');  // Can toggle
     }
+}
+addDay('day 5','New Day')
+
+//Edit the day = replaceWith
