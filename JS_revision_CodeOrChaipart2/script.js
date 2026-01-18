@@ -512,7 +512,7 @@ let domM = function (){
     let h1 = document.createElement('h1')
     console.log(h1);
 
-    h1.setAttribute("titel", "Hello I am created")
+    h1.setAttribute("titel", "Hello I am created title")
     h1.innerHTML = "I am H1 attteched Child"// can give style as well , loops as well 
     // let h1Text= document.createTextNode=("I am Text Node")
     // h1.appendChild(h1Text)
@@ -533,7 +533,7 @@ let domM = function (){
     }
     addDay('day 5', 'New Day')
 
-    //Edit the day = replaceWith
+    //Edit the day = replaceWith()
 }
 
 
@@ -559,4 +559,60 @@ document.querySelector('.googleLink').addEventListener('clcik',function(e){
             })
             //tag name
     
+// setTimeout/interval(),clearTimeout()
 
+let referanceOnly = function(){
+    console.log("i would be refered in timout to get print ")
+}
+const stopMe = setTimeout(referanceOnly,3000)
+document.querySelector('#clear').addEventListener('click',function(){
+    clearTimeout(stopMe)
+    console.log('setTimeOut is stoped');
+    
+}) // same as with setInterval() it also can have perameters and have an extra var 
+//genrate a random body bg color after earch second 
+
+// Fixed color generator
+const randomColor = function() {
+    const hex = '0123456789ABCDEF';
+    let color = '#'; // Added 'let'
+    for(let i = 0; i < 6; i++) { // Added 'let'
+        color += hex[Math.floor(Math.random() * 16)];
+    }
+    return color;
+};
+
+// Store interval ID
+let intervalId = null;
+
+// Start function - only sets up event listener
+function startInterval() {
+    document.querySelector('.start').addEventListener('click', () => {
+        // Clear any existing interval first
+        if (intervalId) {
+            clearInterval(intervalId);
+        }
+        
+        // Start new interval
+        intervalId = setInterval(() => {
+            document.querySelector('body').style.backgroundColor = randomColor();
+        }, 1000);
+        
+        console.log('clicked startInterval button');
+    });
+}
+
+// Stop function - only sets up event listener
+function stopInterval() {
+    document.querySelector('.stop').addEventListener('click', () => {
+        if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = null;
+            console.log('clicked stopInterval button - interval cleared');
+        }
+    });
+}
+
+// Initialize event listeners
+startInterval();
+stopInterval();
