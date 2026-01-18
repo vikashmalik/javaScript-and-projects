@@ -616,3 +616,44 @@ function stopInterval() {
 // Initialize event listeners
 startInterval();
 stopInterval();
+
+//==========Project Press any key===================
+
+const insert = document.querySelector('.insert');
+
+window.addEventListener('keydown', (e) => {
+    insert.innerHTML = `
+    <div class="color">
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>KeyCode</th>
+                <th>Code</th>
+            </tr>
+            <tr>
+                <td>${e.key === ' ' ? 'Space' : e.key}</td>
+                <td>${e.keyCode}</td>
+                <td>${e.code}</td>
+            </tr>
+        </table>
+    </div>
+    `;
+});
+//==Modern aproch
+window.addEventListener('keydown', (e) => {
+    insert.textContent = `
+    Key: ${e.key}
+    Code: ${e.code}
+    KeyCode (deprecated): ${e.keyCode}
+    `;
+});
+
+
+//==============Apply() call(without argument)
+// Basic apply() Syntax
+// The apply() method takes this as the first argument.
+
+// The second argument is an array of values passed to the function.
+
+// Syntax
+// functionName.apply(thisValue, [arg1, arg2, ...]);
