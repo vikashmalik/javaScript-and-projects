@@ -339,3 +339,42 @@ const boundFunc = showInfo.bind(person, 30, "NY");
 boundFunc(); // "Alex is 30 from NY"
 }
 
+//=========Classes=================
+//can add properties function 
+class User{
+    constructor (userName,email,password){
+        this.userName =userName;
+        this.email =email;
+        this.password = password;
+    }
+    usernameUppercase(){
+        return `${this.userName.toUpperCase()}`
+    }
+    encryptPassword(password) {
+        return `${this.password}abc`;
+      }     
+}
+const chai = new User("chai","chai@gmail.com",123)
+console.log(chai);
+console.log(chai.usernameUppercase(),chai.encryptPassword());
+
+//==============Inheritanc
+class inheritancClass {
+    constructor(username) {
+        this.username = username;
+    }
+    logMe(){
+        return `${this.username} is a userName`
+    }
+}
+class teacher extends inheritancClass{
+    constructor(username,email){
+        super(username)// use to acess the inherited perameter or properties 
+        this.email= email;
+    }
+    //also can make some method and call them with . or ij function with call extrension
+}
+const chai1 = new teacher("vikash","email.com")
+console.log(chai1);
+console.log(teacher instanceof inheritancClass);// to chek if the class teacher has been formed from inheriteClass
+
