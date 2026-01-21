@@ -161,10 +161,10 @@ function promiseAsyncFetch(){
       }
       //By default, fetch() makes a GET request, but you can use the method option to use a different request method:
     
-      const response = await fetch("https://example.org/post", {
-        method: "POST",
+    //   const response = await fetch("https://example.org/post", {
+        // method: "POST",
         //If the mode option is set to no-cors, then method must be one of GET, POST or HEAD.
-      });
+    //   });
     // Setting a body:
     // it's the thing the client is sending to the server.
     // You cannot include a body with GET requests, but it's useful for requests that send content to the server,
@@ -191,28 +191,37 @@ function promiseAsyncFetch(){
 // other objects. It acts as a shared
 //use to use sevices, it have component
 // object literal
-let classOne= class car{
-constructor (){
+//Absolute,inheriitance,Encapsulation,Polymorphism read it from chatGpt
+//* object LItreals are nothing but js a object 
+console.log(this)//undefined by default refers to window object
+
+let user={
+    name:"vikash",
+    signedIn: true,
+    getDetails: function(){ console.log("method");
+    }
+}
+console.log(user.name);
+
+ class car{
+constructor (nmae){
     return this.name
 }
 }
-console.log(car('mycar'));
+console.log(new car('mycar'));
 
+const date = new Date(); // new is a consturctor function new Promise()
+console.log(date.getFullYear());
+// console.log(date.setFullYear(2121));
 
+function userFn(userName,age){
+    this.userName = userName;
+    this.age = age;
+    return this
+}
+let userOne = new userFn("Vikash",22)
+let userTwo = new userFn("Jone",23)
+console.log(userOne);
+console.log(userTwo.constructor.length);// we used to use new to avoid the overwrite values
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//https://factech.ai/blog/career/software-product-engineer/ apply here and this https://www.squareradius.in/career
+//Instanceof // to chect the nstance is same or not do r&d on mdn js
