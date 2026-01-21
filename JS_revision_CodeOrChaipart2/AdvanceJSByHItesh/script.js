@@ -185,7 +185,8 @@ function promiseAsyncFetch(){
 }
 
 
-//==================Classes=======================
+function classesPrototypeAndsetProto(){
+    //==================Classes=======================
 //JS doesn't have classes ,most of js is based on the prototype
 //a fundamental mechanism for object inheritance, allowing objects to inherit properties and methods from 
 // other objects. It acts as a shared
@@ -308,4 +309,33 @@ if(teacher.isAvl){
 //__proto__ is out dated, new one is Object.set
 Object.setPrototypeOf(teachSupport,teacher)// now the teachingSporrt have acess of teacher properties as well
 
+}
+//=========call and this bind ==============
+
+let objCall = {
+    vichle: " car",
+    callMethod : function(brand){
+        return this.brand
+    }
+}
+let bike = {brand:"Yahama"}
+console.log(objCall.callMethod.call(bike));
+console.log(objCall.callMethod.apply(bike,[]))
+function callBindApply(){
+    const person = { name: "Alex" };
+
+function showInfo(age, city) {
+    return `${this.name} is ${age} from ${city}`;
+}
+
+// call() - args separately
+showInfo.call(person, 30, "NY"); // "Alex is 30 from NY"
+
+// apply() - args as array
+showInfo.apply(person, [30, "NY"]); // "Alex is 30 from NY"
+
+// bind() - returns function
+const boundFunc = showInfo.bind(person, 30, "NY");
+boundFunc(); // "Alex is 30 from NY"
+}
 
