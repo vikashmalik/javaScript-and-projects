@@ -225,3 +225,87 @@ console.log(userOne);
 console.log(userTwo.constructor.length);// we used to use new to avoid the overwrite values
 
 //Instanceof // to chect the nstance is same or not do r&d on mdn js
+
+//*ProtoTyple
+// prototype → Property of constructor functions
+
+// __proto__ → Property of instances (points to constructor's prototype)
+
+// Prototype chain → How JavaScript finds properties/methods
+
+// Inheritance → Connect prototypes with Object.create()
+
+//====================== advance function*
+
+function userFnOne(userName,price){
+    this.userName = userName;
+    this.price = price;
+}
+userFnOne.prototype.increment = ()=>{
+    this.price++
+}
+userFnOne.prototype.printMe = function(){
+    console.log(`price is = ${this.price}`);
+    
+}
+let chai =  new userFnOne('vikash',99) // must use with new otherwise TypeError: Cannot set properties of undefined 
+// we have to tell to the userFnOne that There is   new method   inroduced and the new keyworld do such work 
+console.log(chai);
+
+//behind the sean new do alot of things 
+// Creates empty object: {}
+
+// Sets prototype: {}.__proto__ = User.prototype
+
+// Binds this: this = {} inside function
+
+// Executes function: User("John") runs
+
+// Returns this: Returns the object automaticallTLDR: new = Create object + Link prototype + Call function with this + Return object
+
+Object.prototype.myMehod=()=>{
+    console.log('method is avl for for all the object');
+    
+}
+userFnOne.myMehod()
+userFn.myMehod()
+let myArr = [1,2,3,4,5,6]
+myArr.myMehod(`hello I am avl in array`)
+myArr.myMehod(`hello I am avl in array`)
+console.log();
+Array.prototype.heyPowerMethod = ()=>
+    {
+    console.log("Array power is avl");
+    
+}
+myArr.heyPowerMethod()// only array woul abl to accec the value 
+
+
+const teacher={
+    makeVideo : true
+}
+const teachingSkills={
+    isAvl : true
+}
+const teachSupport={
+    makeVideoAssignment : true,
+    fullTime: true,
+    __proto__: teachingSkills,//borrow all the property of teaching
+}
+Object.prototype.objMethod=()=>console.log("Teacher method is avl");
+teachSupport.objMethod()
+//tolink the two oject we used to use __proto__
+// teacher.__proto__ = teachingSkills //here teacher obj also can acess all the property of the object 
+//This is the prototiple Inheritance
+console.log(teacher.isAvl);
+if(teacher.isAvl){
+    console.log('teachingskill are avl');
+    
+}else{
+    console.log('teachingskill are not avl or teacher obj doesn"t have acess of properties ');
+
+}
+//__proto__ is out dated, new one is Object.set
+Object.setPrototypeOf(teachSupport,teacher)// now the teachingSporrt have acess of teacher properties as well
+
+
