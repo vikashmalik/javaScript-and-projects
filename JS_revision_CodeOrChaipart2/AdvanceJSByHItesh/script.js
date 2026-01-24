@@ -315,7 +315,7 @@ function classesPrototypeAndsetProto() {
 function classThis() {
 
     let objCall = {
-        vichle: " car",
+        vichle: "car",
         callMethod: function (brand) {
             return this.brand
         }
@@ -323,6 +323,8 @@ function classThis() {
     let bike = { brand: "Yahama" }
     console.log(objCall.callMethod.call(bike));
     console.log(objCall.callMethod.apply(bike, []))
+
+
     function callBindApply() {
         const person = { name: "Alex" };
 
@@ -425,7 +427,29 @@ function definePropertyOfObj(params) {
 
 
 
+//=======GETTER SETTER/* IN CALSS
+// get/set: function(){} with classes function base sintex
+//also can do with object base aintex
 
 
 
+// ========Louser and lexical scope========
 
+//clouse give acccess the scope of outer function to inner fn
+let ppromise =  new Promise ((resolve,reject)=>{
+    let x  = 5;
+    if(x == 51){
+        console.log("avl");
+    resolve()
+
+    }else{
+        reject()
+        console.log("rejected");
+        
+    }
+}).then(()=>{
+    console.log("error");    
+}).catch((err)=>{
+    console.log(err);
+    
+})
