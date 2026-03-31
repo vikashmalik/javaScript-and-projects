@@ -79,6 +79,7 @@
 
 
 // conditions
+//let key = "keyValue"
 //  switch (key) {
 //     case value:
 
@@ -98,7 +99,6 @@
 // default
 
 // }
-
 // falsy value 
 //false,0,-0,Bigint 0n,",NaN",Null, undefined
 
@@ -132,6 +132,12 @@
 
 //     return a + b// 0+10 >then> 10+123
 //   },initialVal) 
+let arr11 = [11,2,3,4,5,6]
+console.log( arr11.reduce((acc,curr)=>
+    acc + curr,0));
+
+// console.log(sum1);
+
 
 
 //  console.log(rMethod); // this method could use to the shoping mall like scanne and price would add and add
