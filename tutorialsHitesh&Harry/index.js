@@ -10,11 +10,14 @@
 //     return x
 // }
 
+
 // let a=[1,2,3,4,5,6,7,8,9,[1,2,3,4,5,6,[1,2,3]]]
 // let b = 1;
+
+
 // // console.log(typeof a) => object
 //  let x= (a.push(99,99,99))
-// console.log(x); // will print 13 te lanth [...[this the inner array will count like only 1 arry then can expend ]]
+// console.log(x); // will print 13 te lanth [...[this the inner array will count like only 1 array then can expend ]]
 
 // let sym= Symbol("k1") // dataType symbol
 // let obj1={
@@ -25,6 +28,8 @@
 //         return "hello"
 //     }
 // }
+//toLocaleUpperCase();  sets the locale-specific rules of the host environment or a specified locale
+
 // console.log(obj1)
 // console.log(obj1.myFunc);
 //Object.freeze(obj1) // set permanent vlaues and properties of object  
@@ -32,7 +37,7 @@
 
 // console.log(typeof obj1[sym]); // string
 
-//singleton object 
+//*                               singleton object 
 // let objSinglton = new Object ()
 ////Object can have an another obj.
 // let person={
@@ -40,15 +45,14 @@
 //         fname:()=>{
 //             return "my full nameFunction"
 //         },
-//         lsname: "maleik",
+//         lsname: "malik",
 //     }
 // }
 
 //optional chaning
 
-
 // console.log(person.fulName?.fname?.lname.chain);
-//? use to checkif the propery does exsist same like "hasOWn"
+//? use to checkif the propery does exsist same like "hasOwn"
 // let obj3={obj1,obj2}// concetination
 //let obj3 ={}
 // console.log(Object.entries(obj1));//Returns an array of key/& values of the enumerable own properties of an object
@@ -69,9 +73,9 @@
 
 // Browser Execution phase
 // 1. Global execution (this)
-// 2.m/m phase
+// 2. m/m phase
 // 3. Execution phase => in single thread
-//  => at global  this exection refers tot the windowObj in BOM (browser object module)
+//  => at global  this exection refers to the windowObj in BOM (browser object module)
 
 
 // conditions

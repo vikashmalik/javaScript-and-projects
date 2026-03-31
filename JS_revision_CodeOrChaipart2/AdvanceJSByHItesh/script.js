@@ -1,8 +1,8 @@
 //==============Apply() call(without argument)
 // Basic apply() Syntax
-// The apply() method takes this as the first argument.
+// The apply() method takes "this" as the first argument.
 
-// The second argument is an array of values passed to the function.
+// The second argument is an "array of values" passed to the function.
 
 // Syntax
 // functionName.apply(thisValue, [arg1, arg2, ...]);
